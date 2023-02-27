@@ -1,0 +1,417 @@
+<%- include("partials/header") %>
+  <%- include("partials/panel/panelHeader") %>
+
+    <body>
+
+      <%- include("partials/panel/panelnavbar") %>
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y ">
+            <!-- DÖVİZ BİLGİSİ -->
+
+            <p>usd: <span>10</span></p>
+            <p>tl: <span>10</span></p>
+            <!-- Order Statistics -->
+            <div class="row">
+
+              <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                    <div class="card-title mb-0">
+                      <h5 class="m-0 me-2">Order Statistics</h5>
+                      <small class="text-muted">42.82k Total Sales</small>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn p-0" type="button" id="orederStatistics" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
+                        <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <div class="d-flex flex-column align-items-center gap-1">
+                        <h2 class="mb-2">8,258</h2>
+                        <span>Total Orders</span>
+                      </div>
+                      <div id="orderStatisticsChart"></div>
+                    </div>
+                    <ul class="p-0 m-0">
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-mobile-alt"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Electronic</h6>
+                            <small class="text-muted">Mobile, Earbuds, TV</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">82.5k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Fashion</h6>
+                            <small class="text-muted">T-shirt, Jeans, Shoes</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">23.8k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Decor</h6>
+                            <small class="text-muted">Fine Art, Dining</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">849k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-secondary"><i class="bx bx-football"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Sports</h6>
+                            <small class="text-muted">Football, Cricket Kit</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">99</small>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                    <div class="card-title mb-0">
+                      <h5 class="m-0 me-2">Order Statistics</h5>
+                      <small class="text-muted">42.82k Total Sales</small>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn p-0" type="button" id="orederStatistics" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
+                        <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <div class="d-flex flex-column align-items-center gap-1">
+                        <h2 class="mb-2">8,258</h2>
+                        <span>Total Orders</span>
+                      </div>
+                      <div id="orderStatisticsChart"></div>
+                    </div>
+                    <ul class="p-0 m-0">
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-mobile-alt"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Electronic</h6>
+                            <small class="text-muted">Mobile, Earbuds, TV</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">82.5k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Fashion</h6>
+                            <small class="text-muted">T-shirt, Jeans, Shoes</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">23.8k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Decor</h6>
+                            <small class="text-muted">Fine Art, Dining</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">849k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-secondary"><i class="bx bx-football"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Sports</h6>
+                            <small class="text-muted">Football, Cricket Kit</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">99</small>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                    <div class="card-title mb-0">
+                      <h5 class="m-0 me-2">Order Statistics</h5>
+                      <small class="text-muted">42.82k Total Sales</small>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn p-0" type="button" id="orederStatistics" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
+                        <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <div class="d-flex flex-column align-items-center gap-1">
+                        <h2 class="mb-2">8,258</h2>
+                        <span>Total Orders</span>
+                      </div>
+                      <div id="orderStatisticsChart"></div>
+                    </div>
+                    <ul class="p-0 m-0">
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-mobile-alt"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Electronic</h6>
+                            <small class="text-muted">Mobile, Earbuds, TV</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">82.5k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Fashion</h6>
+                            <small class="text-muted">T-shirt, Jeans, Shoes</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">23.8k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex mb-4 pb-1">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Decor</h6>
+                            <small class="text-muted">Fine Art, Dining</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">849k</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="d-flex">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <span class="avatar-initial rounded bg-label-secondary"><i class="bx bx-football"></i></span>
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                          <div class="me-2">
+                            <h6 class="mb-0">Sports</h6>
+                            <small class="text-muted">Football, Cricket Kit</small>
+                          </div>
+                          <div class="user-progress">
+                            <small class="fw-semibold">99</small>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Order Statistics -->
+            <!-- ADMİN BÖLÜMÜ -->
+            <div class="row">
+
+              <div class="col-md mb-4 mb-md-0">
+                <h4>Sayfa Admin İşlemleri</h4>
+                <small class="text-light fw-semibold">Kullanıcılara yönelik ekleme çıkarma</small>
+                <div class="accordion mt-3" id="accordionExample">
+                  <!-- BÖLÜMLER -->
+                  <!-- Eksik Bilgileri Olan Kullanıcı -->
+                  <div class="card accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#accordionOne" aria-expanded="false" aria-controls="accordionOne">
+                        Eksik Bilgileri Olan Kullanıcı
+                      </button>
+                    </h2>
+                    <div id="accordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+
+                        <!-- Basic Bootstrap Table -->
+                        <div class="col-md-12 col-lg-12 col-xl-12 order-0 mb-5">
+                          <div class="card">
+                            <h5 class="card-header text-capitalize">
+                              <strong>Eksik Bilgileri olan personel</strong>
+                            </h5>
+                            <div class="table-responsive text-nowrap" style="min-height: 230px;">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Personel İsmi</th>
+                                    <th>Yapılacak İşlem</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                  <tr>
+                                    <% bilgiEksikUser.forEach(user=> { %>
+                                      <% if(user.kullaniciAdi !==undefined){ %>
+                                  <tr>
+                                    <td><i class="fas fa-person-circle-exclamation fa-lg text-danger me-3"></i>
+                                      <%= user.kullaniciAdi %>
+                                    </td>
+                                    <td>
+                                      <div class="dropdown">
+                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                          data-bs-toggle="dropdown">
+                                          <i class="fas fa-clipboard-list"></i>
+                                          İşlem Yap</button>
+                                        <div class="dropdown-menu">
+                                          <a class="dropdown-item" href="javascript:void(0);"><i
+                                              class="fas fa-paper-plane me-1"></i>
+                                            Mail Gönder</a>
+                                          <a class="dropdown-item" href="javascript:void(0);"><i
+                                              class="bx bx-trash me-1"></i>
+                                            Sil</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <% } %>
+                                    <% }); %>
+                                      </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/ Basic Bootstrap Table -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- KULLANICI YETKİLENDİRME -->
+                  <div class="card accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
+                        Kullanıcı Yetkilendirme
+                      </button>
+                    </h2>
+                    <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear claw dragée oat cake
+                        dragée ice cream halvah tootsie roll. Danish cake oat cake pie macaroon tart donut gummies.
+                        Jelly beans candy canes carrot cake. Fruitcake chocolate chupa chups.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ONAY BEKLEYEN KULLANICI-->
+                  <div class="card accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">
+                        Onay Bekleyen Kullanıcılar
+                      </button>
+                    </h2>
+                    <div id="accordionThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Oat cake toffee chocolate bar jujubes. Marshmallow brownie lemon drops cheesecake. Bonbon
+                        gingerbread marshmallow sweet jelly beans muffin. Sweet roll bear claw candy canes oat cake
+                        dragée caramels. Ice cream wafer danish cookie caramels muffin.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOŞ EKLENECEK VARSA ÖRNEK KOD -->
+                  <div class="card accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#accordionFour" aria-expanded="false" aria-controls="accordionThree">
+                        Accordion Item 3
+                      </button>
+                    </h2>
+                    <div id="accordionFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Oat cake toffee chocolate bar jujubes. Marshmallow brownie lemon drops cheesecake. Bonbon
+                        gingerbread marshmallow sweet jelly beans muffin. Sweet roll bear claw candy canes oat cake
+                        dragée caramels. Ice cream wafer danish cookie caramels muffin.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BÖLÜMLER -->
+                </div>
+              </div>
+
+
+
+            </div>
+            <!-- ADMİN BÖLÜMÜ -->
+          </div>
+          <!-- / Content -->
+          <%- include("partials/panel/panelFooter") %>

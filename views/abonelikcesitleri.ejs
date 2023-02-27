@@ -1,0 +1,196 @@
+<%- include("partials/header") %>
+    <%- include("partials/panel/panelHeader") %>
+
+        <!-- CSS CARD  -->
+        <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+        <link rel="stylesheet" href="/assets/css/csscardCss/style.css" />
+
+        <body>
+            <%- include("partials/panel/panelnavbar") %>
+                <div id="kategori" class="container-xxl flex-grow-1 container-p-y mb-5">
+                    <h4 class="fw-bold py-3 mb-4">
+                        <span class="text-muted fw-light">Abonelik /</span> <strong>Abonelik Çeşitleri</strong>
+                    </h4>
+                    <!-- Accordion -->
+                    <div class="row justify-content-center mt-4">
+                        <!-- CSS CARD -->
+                        <section class="section-plans" id="section-plans">
+                            <div class="row">
+                                <% abonelik.forEach(v=> { %>
+                                    <div class="col-12 col-md-6 col-sm-6 col-lg-3">
+                                        <div class="card">
+                                            <div class="card__side card__side--front-1">
+                                                <div class="card__title card__title--1">
+                                                    <i class="fas fa-paper-plane"></i>
+                                                    <h4 class="card__heading"><%= v.name _%></h4>
+                                                </div>
+                                                <div class="card__details">
+                                                    <ul>
+                                                        <li class="text-capitalize"><%= v.description _%></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card__side card__side--back card__side--back-1">
+                                                <div class="card__cta">
+                                                    <div class="card__price-box">
+                                                        <p class="card__price-only">Only</p>
+                                                        <p class="card__price-value"><%= v.pricingPlanScurrencyCode _%><%= v.pricingPlanSprice _%>/mo*</p>
+                                                    </div>
+                                                    <a data-abonelik="<%= v.referenceCode _%>" href="payment" class="btn btn--white">Satın Al</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% }); %>
+                                </div>
+
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-sm-6 col-lg-3">
+                                    <div class="card">
+                                        <div class="card__side card__side--front-1">
+                                            <div class="card__title card__title--1">
+                                                <i class="fas fa-paper-plane"></i>
+                                                <h4 class="card__heading">Basic</h4>
+                                            </div>
+
+                                            <div class="card__details">
+                                                <ul>
+                                                    <li>20 Hizmet Görüntüleme</li>
+                                                    <li>20 Hizmet Girişi Yapmak</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card__side card__side--back card__side--back-1">
+                                            <div class="card__cta">
+                                                <div class="card__price-box">
+                                                    <p class="card__price-only">Only</p>
+                                                    <p class="card__price-value">$2.95/mo*</p>
+                                                </div>
+                                                <a href="#popup" class="btn btn--white">Select</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-sm-6 col-lg-3">
+                                    <div class="card">
+                                        <div class="card__side card__side--front-2">
+                                            <div class="card__title card__title--2">
+                                                <i class="fas fa-plane"></i>
+                                                <h4 class="card__heading">Plus</h4>
+                                            </div>
+
+                                            <div class="card__details">
+                                                <ul>
+                                                    <li>50 Hizmet Görüntüleme</li>
+                                                    <li>50 Hizmet Girişi Yapmak</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card__side card__side--back card__side--back-2">
+                                            <div class="card__cta">
+                                                <div class="card__price-box">
+                                                    <p class="card__price-only">Only</p>
+                                                    <p class="card__price-value">$5.45/mo*</p>
+                                                </div>
+                                                <a href="#popup" class="btn btn--white">Select</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-sm-6 col-lg-3">
+                                    <div class="card">
+                                        <div class="card__side card__side--front-3">
+                                            <div class="card__title card__title--3">
+                                                <i class="fas fa-rocket"></i>
+                                                <h4 class="card__heading">Pro</h4>
+                                            </div>
+
+                                            <div class="card__details">
+                                                <ul>
+                                                    <li>100 Hizmet Görüntüleme</li>
+                                                    <li>100 Hizmet Girişi Yapmak</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card__side card__side--back card__side--back-3">
+                                            <div class="card__cta">
+                                                <div class="card__price-box">
+                                                    <p class="card__price-only">Only</p>
+                                                    <p class="card__price-value">$13.95/mo</p>
+                                                </div>
+                                                <a href="#popup" class="btn btn--white">Select</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="u-center-text u-margin-top-huge">
+              <a href="#" class="btn btn--green">Get Started</a>
+          </div> -->
+                        </section>
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="col-md-5 col-lg-5 mb-3 pe-0 ps-0  abonelik">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">ÜRÜN YÜKLEME / ÜRÜN GÖRÜNTÜLEME</h5>
+                                    <div class="my-5 metin">
+                                        <label for="smallSelect" class="form-label">Miktar Belirleyiniz</label>
+                                        <select id="smallSelect" class="form-select form-select-sm">
+                                            <option>Miktar Seçiniz</option>
+                                            <option value="1">5-10</option>
+                                            <option value="2">10-20</option>
+                                            <option value="3">20 Üstü</option>
+                                        </select>
+                                        <a href="aboneolyillik" class="card-link">Yıllık Öde</a>
+                                        <a href="aboneolaylik" class="card-link">Aylık Abonelik</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 col-lg-5 mb-3 pe-0 ps-0 abonelik">
+                            <div class="card h-100">
+                                <div class="card-body ">
+                                    <h5 class="card-title text-center">HİZMET YÜKLEME - GÖRÜNTÜLEME</h5>
+                                    <div class="my-5 metin">
+                                        <label for="smallSelect" class="form-label">Miktar Belirleyiniz</label>
+                                        <select id="smallSelect" class="form-select form-select-sm">
+                                            <option>Miktar Seçiniz</option>
+                                            <option value="1">5-10</option>
+                                            <option value="2">10-20</option>
+                                            <option value="3">20 Üstü</option>
+                                        </select>
+                                        <a href="javascript:void(0);" class="card-link">Yıllık Öde</a>
+                                        <a href="javascript:void(0);" class="card-link">Aylık Abonelik</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!--/ Accordion -->
+                </div>
+                <%- include("partials/panel/panelFooter") %>

@@ -1,0 +1,229 @@
+<%- include("partials/header") %>
+
+  <link rel="stylesheet" href="/assets/css/loginCss/login.css">
+  </head>
+
+  <body>
+
+    <!-- SÖZLEŞME MODAL -->
+    <!-- Modal -->
+    <div class="modal fade" id="sozlesmeModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Kullanıcı Sözleşmesi</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda
+            consequuntur praesentium excepturi error vel, maiores officia, dolor et, temporibus saepe neque
+            voluptatibus distinctio. Velit aspernatur temporibus asperiores blanditiis consectetur.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SÖZLEŞME MODAL -->
+    <div class="row">
+      <div class="col-md-6 mx-auto p-0">
+        <div class="card">
+          <div class="login-box">
+            <div class="login-snip">
+
+
+
+              <div class="mb-2 text-end">
+                <select lang="<%= lang _%> " name="dilsec" class="rounded-pill border-0 bg-transparent text-light">
+                  <% if (lang==="tr" ) { %>
+                    <option value="">Dil Seçiniz</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="en">ingilizce</option>
+                    <option value="fr">Fransızca</option>
+                    <option value="ar">Arapça</option>
+                    <% } else if(lang==="en" ) { %>
+                      <option value="">Select Language</option>
+                      <option value="tr">Turkish</option>
+                      <option value="en">English</option>
+                      <option value="fr">French</option>
+                      <option value="ar">Arabic</option>
+                      <% } else if(lang==="fr" ) { %>
+                        <option value="">Choisir la langue</option>
+                        <option value="tr">Turc</option>
+                        <option value="en">Anglais</option>
+                        <option value="fr">Français</option>
+                        <option value="ar">Arabe</option>
+                        <% } else if(lang==="ar" ) { %>
+                          <option value="">اختار اللغة</option>
+                          <option value="tr">اللغة التركية</option>
+                          <option value="en">إنجليزي</option>
+                          <option value="fr">فرنسي</option>
+                          <option value="ar">عربي</option>
+                          <% } %>
+                </select>
+              </div>
+
+
+
+
+              <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Giriş
+                Yapın</label>
+              <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Kayıt
+                Olun</label>
+              <div class="login-space">
+
+                <!-- GİRİŞ YAPMAK İÇİN FORM -->
+
+                <div id="loginkullaniciform" class="login">
+                  <div class="group">
+                    <label for="mail" class="label">Mail Adresi</label>
+                    <input id="maillog" type="email" class="input" placeholder="Enter your mail" required>
+                  </div>
+                  <div class="group">
+                    <label for="pass" class="label">Password</label>
+                    <input id="passlog" type="password" class="input" data-type="password"
+                      placeholder="Enter your password" required>
+                  </div>
+                  <div class="group">
+                    <input type="submit" class="button" value="Sign In">
+                  </div>
+                  <div id="alertlogin"></div>
+                  <div class="hr"></div>
+                  <div class="foot">
+                    <a class="text-danger" href="#">Parolanızı Hatırlamıyormusunuz ?</a>
+                  </div>
+                  <div class="foot mt-2"><a class="text-info" href="home">
+                      <%= langDilJson.text2 _%>
+                    </a></div>
+                </div>
+                <!-- KAYIT  YAPMAK İÇİN FORM -->
+
+                <div id="registerkullaniciform" class="sign-up-form">
+                  <div class="group">
+                    <label for="user" class="label">Username</label>
+                    <input id="userReg" type="text" class="input" placeholder="Create your Username" required>
+                  </div>
+                  <div class="group">
+                    <label for="pass" class="label">Password</label>
+                    <input id="passReg" type="password" class="input" minlength="6" data-type="password"
+                      placeholder="Create your password" required>
+                  </div>
+                  <div class="group">
+                    <label for="pass" class="label">Repeat Password</label>
+                    <input id="passRegcheck" type="password" class="input" data-type="password"
+                      placeholder="Repeat your password">
+                  </div>
+                  <div class="group">
+                    <label for="email" class="label">Email Address</label>
+                    <input id="emailReg" type="email" class="input" placeholder="Enter your email address" required>
+                  </div>
+                  <div class="form-check">
+                    <input class="check form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label id="sozRegcheck" class="form-check-label" for="flexCheckDefault">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#sozlesmeModal">Kullanıcı
+                        Sözleşmesi için tıklayınız...</a>
+                    </label>
+                  </div>
+                  <div class="group">
+                    <input type="submit" class="button" value="SignUp">
+                  </div>
+                  <div id="alert"></div>
+                  <div class="hr"></div>
+                  <div class="foot">
+                    <label for="tab-1">Zaten Üyemisiniz ??</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER PARTİAL -->
+
+    <%- include("partials/footer") %>
+      <!-- FOOTER PARTİAL -->
+
+      <script src="/assets/js/loginJs/login.js"></script>
+
+  </body>
+
+  </html>

@@ -1,0 +1,69 @@
+<%- include("partials/header") %>
+  <%- include("partials/panel/panelHeader") %>
+
+    <body>
+
+      <%- include("partials/panel/panelnavbar") %>
+
+        <div class="container-xxl flex-grow-1 container-p-y">
+          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Ürün Onay Durumu /</span> Onay Bekleyen
+            Ürünler
+          </h4>
+          <div class="row mb-5 row-reverse">
+
+
+            <% urunDb.forEach((v, i)=> { %>
+              <% 
+                if (lang==="tr" ) { 
+                  var urunBasligiDb=v.urunBasligi.tr 
+                  var aciklayiciMetinDb=v.aciklayiciMetin.tr 
+                }else if (lang==="en" ) { 
+                    var urunBasligiDb=v.urunBasligi.en 
+                    var aciklayiciMetinDb=v.aciklayiciMetin.en 
+                }else if (lang==="fr" ) { 
+                  var urunBasligiDb=v.urunBasligi.fr 
+                  var aciklayiciMetinDb=v.aciklayiciMetin.fr 
+                }else if (lang==="ar" ) { 
+                  var urunBasligiDb=v.urunBasligi.ar 
+                  var aciklayiciMetinDb=v.aciklayiciMetin.ar 
+                }
+              %>
+
+
+                <div class="col-6">
+                  <div class="card mb-3">
+                    <div class="row g-0 d-flex ">
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title" lang="<%= lang _%>">
+                            <%= urunBasligiDb %>
+                          </h5>
+                          <p class="card-text" lang="<%= lang _%> ">
+                            <%= aciklayiciMetinDb%>
+                          </p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <img class="card-img card-img-right" src="/assets/image/urunimg/normal/<%= v.urunimg %> "
+                          alt="Card image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+                <% }) %>
+
+
+
+
+
+
+          </div>
+        </div>
+        <%- include("partials/panel/panelFooter") %>

@@ -1,0 +1,230 @@
+<%- include("partials/header") %>
+  <%- include("partials/panel/panelHeader") %>
+
+    <body>
+
+      <%- include("partials/panel/panelnavbar") %>
+        <div id="eksikbilgirow" class="container-xxl flex-grow-1 container-p-y">
+          <h4 class="fw-bold py-3 mb-4">
+            <span class="text-muted fw-light">Üye İşlemleri /</span> Onay Bekleyen Üyeler
+          </h4>
+          <div class="row">
+            <!-- DEĞİŞECEK ALAN PAGEPANEL JS DİV BOYUTUNU 100% YAPMAK İÇİN İD BUTTON DATA BS TARGET İLE ETKİLEŞİMDE-->
+            <!-- HER DİV İD USER İD EKLENECEK (14) -->
+
+            <div id="collapseeksikbilgi-14" class="col-6 mb-2">
+              <!-- DEĞİŞECEK ALAN İD-->
+              <nav class="navbar navbar-example navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                  <p class="navbar-brand my-auto text-uppercase">
+                    <i class="fas fa-person-circle-exclamation fa-lg text-danger me-3"></i>
+                    <strong>uğur</strong>
+                  </p>
+                  <!-- DEĞİŞECEK ALAN data-bs-target-->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-14">
+                    <!-- DEĞİŞECEK ALAN -->
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbar-14">
+                    <div class="navbar-nav me-auto">
+                      <!-- DEĞİŞECEK ALAN data-bs-target -->
+                      <button class="btn btn-primary me-1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#eksikbilgi-14" aria-expanded="false" aria-controls="collapseExample">
+                        Kullanıcı Bilgilerini Gör
+                      </button>
+                      <!-- DEĞİŞECEK ALAN -->
+                    </div>
+
+                  </div>
+                </div>
+              </nav>
+              <!-- DEĞİŞECEK ALAN -->
+              <div class="collapse" id="eksikbilgi-14">
+                <!-- DEĞİŞECEK ALAN -->
+                <div class="d-grid d-sm-flex p-3 border">
+                  <div class="col-md-12 col-lg-12 col-xl-12 order-0 mb-5">
+                    <div class="table-responsive text-nowrap" style="min-height: 230px;">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Bölüm</th>
+                            <th>Konular</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                          <tr>
+                            <td>
+                              <p class="m-0"><i class="menu-icon tf-icons bx bx-folder-minus"></i> Adres</p>
+                            </td>
+                            <td>
+                              <p class="text-danger  m-0">Eksik Bilgi</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="m-0"><i class="menu-icon tf-icons bx bx-folder-minus"></i> Mail</p>
+                            </td>
+                            <td>
+                              <p class="text-danger m-0">Eksik Bilgi</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                        <thead>
+                          <tr>
+                            <th>
+                              <i class="fas fa-clipboard-list"></i>
+                              İşlem Yap
+                            </th>
+                            <th>
+                              <a class="mx-2 text-danger" href="javascript:void(0);">
+                                <i class="bx bx-user-check me-1"></i>
+                                Onayla
+                              </a>
+
+
+                              <!-- Button trigger modal -->
+                              <a href="javascript:void(0);" class="text-danger" data-bs-toggle="modal"
+                                data-bs-target="#redmessage">
+                                <i class="bx bx-user-x me-1"></i>red
+                              </a>
+
+                              <!-- RED MESSAGE Modal -->
+                              <div class="modal fade" id="redmessage" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel1">Mesajınız</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="row">
+                                        <div class="col mb-3">
+                                          <input type="text" id="nameBasic" class="form-control"
+                                            placeholder="Mesajınızı yazınız" />
+                                        </div>
+                                      </div>
+         
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                        Kapat
+                                      </button>
+                                      <button type="button" class="btn btn-primary">Kaydet</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <a class="mx-2 text-danger" href="javascript:void(0);"><i
+                                  class="fas fa-paper-plane me-1"></i>
+                                Mail Gönder</a>
+                              <a class="text-muted mx-2"><i class="fa-brands fa-whatsapp"></i>
+                                Whatsapp</a>
+                            </th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="collapseeksikbilgi-15" class="col-6 mb-2">
+              <!-- DEĞİŞECEK ALAN İD-->
+              <nav class="navbar navbar-example navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                  <p class="navbar-brand my-auto text-uppercase">
+                    <i class="fas fa-person-circle-exclamation fa-lg text-danger me-3"></i>
+                    <strong>uğur</strong>
+                  </p>
+                  <!-- DEĞİŞECEK ALAN data-bs-target-->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-15">
+                    <!-- DEĞİŞECEK ALAN -->
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbar-14">
+                    <div class="navbar-nav me-auto">
+                      <!-- DEĞİŞECEK ALAN data-bs-target -->
+                      <button class="btn btn-primary me-1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#eksikbilgi-15" aria-expanded="false" aria-controls="collapseExample">
+                        Kullanıcı Bilgilerini Gör
+                      </button>
+                      <!-- DEĞİŞECEK ALAN -->
+                    </div>
+
+                  </div>
+                </div>
+              </nav>
+              <!-- DEĞİŞECEK ALAN -->
+              <div class="collapse" id="eksikbilgi-15">
+                <!-- DEĞİŞECEK ALAN -->
+                <div class="d-grid d-sm-flex p-3 border">
+                  <div class="col-md-12 col-lg-12 col-xl-12 order-0 mb-5">
+                    <div class="table-responsive text-nowrap" style="min-height: 230px;">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Bölüm</th>
+                            <th>Konular</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                          <tr>
+                            <td>
+                              <p class="m-0"><i class="menu-icon tf-icons bx bx-folder-minus"></i> Adres</p>
+                            </td>
+                            <td>
+                              <p class="text-danger  m-0">Eksik Bilgi</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="m-0"><i class="menu-icon tf-icons bx bx-folder-minus"></i> Mail</p>
+                            </td>
+                            <td>
+                              <p class="text-danger m-0">Eksik Bilgi</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                        <thead>
+                          <tr>
+                            <th>
+                              <i class="fas fa-clipboard-list"></i>
+                              İşlem Yap
+                            </th>
+                            <th>
+                              <a class="mx-2 text-danger" href="javascript:void(0);">
+                                <i class="bx bx-user-check me-1"></i>
+                                Onayla</a>
+                              <input name="userredmessage" type="text" placeholder="Sebep yazınız">
+                              <a class="mx-2 text-danger" href="javascript:void(0);">
+                                <i class="bx bx-user-x me-1"></i>
+                                red</a>
+                              <a class="mx-2 text-danger" href="javascript:void(0);"><i
+                                  class="fas fa-paper-plane me-1"></i>
+                                Mail Gönder</a>
+                              <a class="text-muted mx-2"><i class="fa-brands fa-whatsapp"></i>
+                                Whatsapp</a>
+                            </th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <%- include("partials/panel/panelFooter") %>

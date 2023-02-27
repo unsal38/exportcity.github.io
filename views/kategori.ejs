@@ -1,0 +1,433 @@
+<%- include("partials/header") %>
+  <%- include("partials/panel/panelHeader") %>
+
+    <body>
+      <%- include("partials/panel/panelnavbar") %>
+
+
+
+        <!-- Kategori Ekle Modal -->
+        <div id="alert" class="basicModal modal fade  " tabindex="-1" aria-hidden="true">
+          <!-- show d-block // modal göstermek için class -->
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <!-- <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5> -->
+                <h2 class="text-danger text-capitalize">Uyarı !!</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <!-- <h3 class="text-capitalize">deneme</h3> -->
+                  <!-- <div class="col mb-3">
+                      <label for="nameBasic" class="form-label">Name</label>
+                      <input type="text" id="nameBasic" class="form-control" placeholder="Enter Name" />
+                    </div> -->
+                </div>
+                <!-- <div class="row g-2">
+                    <div class="col mb-0">
+                      <label for="emailBasic" class="form-label">Email</label>
+                      <input type="text" id="emailBasic" class="form-control" placeholder="xxxx@xxx.xx" />
+                    </div>
+                    <div class="col mb-0">
+                      <label for="dobBasic" class="form-label">DOB</label>
+                      <input type="text" id="dobBasic" class="form-control" placeholder="DD / MM / YY" />
+                    </div>
+                  </div> -->
+              </div>
+              <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+
+
+
+
+
+        <div id="kategori" class="container-xxl flex-grow-1 container-p-y mb-5">
+          <h4 class="fw-bold py-3 mb-4">
+            <span class="text-muted fw-light">Kategori /</span>
+          </h4>
+          <!-- Accordion -->
+          <div class="row">
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+              <div class="accordion mt-3">
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                      Ana Kategori
+                    </button>
+                  </h2>
+
+                  <div id="accordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">İd</th>
+                            <th scope="col">tr</th>
+                            <th scope="col">En</th>
+                            <th scope="col">fr</th>
+                            <th scope="col">ar</th>
+                            <th scope="col">Sil</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <% anakategori.forEach(v=> {%>
+                            <tr>
+                              <th scope="row">
+                                <%= v.id %>
+                              </th>
+                              <td>
+                                <%= v.urunAnaKategori.tr _%>
+                              </td>
+                              <td>
+                                <%= v.urunAnaKategori.en _%>
+                              </td>
+                              <td>
+                                <%= v.urunAnaKategori.fr _%>
+                              </td>
+                              <td>
+                                <%= v.urunAnaKategori.ar _%>
+                              </td>
+                              <td>
+                                <select id="<%= v.id %>" class="form-select">
+                                  <option value="null">Seçiniz</option>
+                                  <option value="delete">Sil</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <% }); %>
+                              <tr>
+                                <td colspan="4" class="text-end">
+                                  <ul class="list-group w-70">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="anakategoritr" type="text" class="form-control me-5"
+                                        placeholder="Türkçe olarak giriş yapınız" aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="anakategorien" type="text" class="form-control  me-5"
+                                        placeholder="İngilizce olarak giriş yapınız"
+                                        aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="anakategorifr" type="text" class="form-control me-5"
+                                        placeholder="Fransızca olarak giriş yapınız"
+                                        aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="anakategoriar" type="text" class="form-control me-5"
+                                        placeholder="Arapça olarak giriş yapınız" aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </td>
+                                <td colspan="6" class="text-end">
+                                  <button id="anakategori" name="kategoriekle" type="button" class="btn btn-secondary">
+                                    <!--   data-bs-toggle="modal"  data-bs-target=".basicModal"  // Modal tetiklenmesi için -->
+                                    <span class="tf-icons bx bx-add-to-queue"></span>&nbsp; Kategori Ekle
+                                  </button>
+                                </td>
+                              </tr>
+                        </tbody>
+
+                      </table>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+              <div class="accordion mt-3">
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
+                      Bir Alt Kategori
+                    </button>
+                  </h2>
+                  <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" colspan="1">Ürün Ana Kategori</th>
+                            <th scope="col" colspan="2">tr</th>
+                            <th scope="col" colspan="3">En</th>
+                            <th scope="col" colspan="4">fr</th>
+                            <th scope="col" colspan="5">ar</th>
+                            <th scope="col" colspan="6">Sil</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% biraltkategori.forEach(biraltkategori=> {%>
+                            <tr>
+                              <% anakategori.forEach(anakategori=> {%>
+                                <% if(anakategori.id===biraltkategori.urunAnaKategori_id){ %>
+                                  <td colspan="1">
+                                    Ana Kategori : <%= anakategori.urunAnaKategori.tr %>
+                                  </td>
+                                  <% } %>
+                                    <% }) %>
+
+                                      <td colspan="2">
+                                        <%= biraltkategori.urunBirAltkategori.tr %>
+                                      </td>
+                                      <td colspan="3">
+                                        <%= biraltkategori.urunBirAltkategori.en %>
+                                      </td>
+                                      <td colspan="4">
+                                        <%= biraltkategori.urunBirAltkategori.fr %>
+                                      </td>
+                                      <td colspan="5">
+                                        <%= biraltkategori.urunBirAltkategori.ar %>
+                                      </td>
+                                      <td colspan="6">
+                                        <select id="<%= biraltkategori.id %> " class="form-select">
+                                          <option value="null">Seçiniz</option>
+                                          <option value="delete">Sil</option>
+                                        </select>
+                                      </td>
+                            </tr>
+                            <% }) %>
+                              <tr>
+                                <td colspan="3" class="text-end">
+                                  <ul class="list-group w-70">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="biraltkategoritr" type="text" class="form-control me-5"
+                                        placeholder="Türkçe olarak giriş yapınız" aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="biraltkategorien" type="text" class="form-control  me-5"
+                                        placeholder="İngilizce olarak giriş yapınız"
+                                        aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="biraltkategorifr" type="text" class="form-control me-5"
+                                        placeholder="Fransızca olarak giriş yapınız"
+                                        aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="biraltkategoriar" type="text" class="form-control me-5"
+                                        placeholder="Arapça olarak giriş yapınız" aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </td>
+
+                                <td colspan="5" class="text-end">
+                                  <ul class="list-group">
+                                    <li class="list-group-item">
+                                      <select id="anakategorisec" class="form-select">
+                                        <option value="null">Ana Kategori Seçiniz</option>
+                                        <% anakategori.forEach(anakategori=> {%>
+                                          <option value="<%= anakategori.id %> ">
+                                            <%= anakategori.urunAnaKategori.tr %>
+                                          </option>
+                                          <% }) %>
+                                      </select>
+                                    </li>
+                                    <li class="list-group-item">
+                                      <button id="biraltkategori" name="kategoriekle" type="button"
+                                        class="btn btn-secondary">
+                                        <!--   data-bs-toggle="modal"  data-bs-target=".basicModal"  // Modal tetiklenmesi için -->
+                                        <span class="tf-icons bx bx-add-to-queue"></span>&nbsp; Kategori Ekle
+                                      </button>
+                                    </li>
+                                  </ul>
+
+
+                                </td>
+                              </tr>
+                        </tbody>
+
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+              <div class="accordion mt-3">
+
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">
+                      İki alt Kategori
+                    </button>
+                  </h2>
+                  <div id="accordionThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" colspan="1">Ürün Bir Alt Kategori</th>
+                            <th scope="col" colspan="2">tr</th>
+                            <th scope="col" colspan="3">En</th>
+                            <th scope="col" colspan="4">fr</th>
+                            <th scope="col" colspan="5">ar</th>
+                            <th scope="col" colspan="6">Sil</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% ikialtkategori.forEach(ikialtkategori=> {%>
+                            <tr>
+                              <% biraltkategori.forEach(biraltkategori=> {%>
+                                <% if(biraltkategori.id===ikialtkategori.urunBirAltkategori_id){ %>
+                                  <td colspan="1">
+                                    Bir Alt Kategori : <%= biraltkategori.urunBirAltkategori.tr %>
+                                  </td>
+                                <% } %>
+                              <% }) %>
+                              <td colspan="2">
+                                <%= ikialtkategori.urunikiAltkategori.tr %>
+                              </td>
+                              <td colspan="3">
+                                <%= ikialtkategori.urunikiAltkategori.en %>
+                              </td>
+                              <td colspan="4">
+                                <%= ikialtkategori.urunikiAltkategori.fr %>
+                              </td>
+                              <td colspan="5">
+                                <%= ikialtkategori.urunikiAltkategori.ar %>
+                              </td>
+                              <td colspan="6">
+                                <select id="<%= ikialtkategori.id %> " class="form-select">
+                                  <option value="null">Seçiniz</option>
+                                  <option value="delete">Sil</option>
+                                </select>
+                              </td>
+                            </tr>
+                          <% }) %> 
+                              <tr>
+                                <td colspan="3" class="text-end">
+                                  <ul class="list-group w-70">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="ikialtkategoritr" type="text" class="form-control me-5"
+                                        placeholder="Türkçe olarak giriş yapınız" aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="ikialtkategorien" type="text" class="form-control  me-5"
+                                        placeholder="İngilizce olarak giriş yapınız"
+                                        aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="ikialtkategorifr" type="text" class="form-control me-5"
+                                        placeholder="Fransızca olarak giriş yapınız"
+                                        aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      <input name="ikialtkategoriar" type="text" class="form-control me-5"
+                                        placeholder="Arapça olarak giriş yapınız" aria-describedby="floatingInputHelp">
+                                      <span class="badge bg-danger rounded-pill"> <!--bg-success-->
+                                        <i class="d-none tf-icons bx bx-check"></i>
+                                        <i class="tf-icons bx bx-minus"></i>
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </td>
+                                <td colspan="5" class="text-end">
+                                  <ul class="list-group">
+                                    <li class="list-group-item">
+                                      <select id="biraltkategorisec" class="form-select">
+                                        <option value="null">Bir Alt Kategori Seçiniz</option>
+                                        <% biraltkategori.forEach(biraltkategori=> {%>
+                                          <option value="<%= biraltkategori.id %> ">
+                                            <%= biraltkategori.urunBirAltkategori.tr %>
+                                          </option>
+                                          <% }) %>
+                                      </select>
+                                    </li>
+                                    <li class="list-group-item">
+                                      <button id="ikialtkategori" name="kategoriekle" type="button"
+                                        class="btn btn-secondary">
+                                        <!--   data-bs-toggle="modal"  data-bs-target=".basicModal"  // Modal tetiklenmesi için -->
+                                        <span class="tf-icons bx bx-add-to-queue"></span>&nbsp; Kategori Ekle
+                                      </button>
+                                    </li>
+                                  </ul>
+
+
+                                </td>
+                              </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/ Accordion -->
+        </div>
+
+
+
+
+
+
+
+        <%- include("partials/panel/panelFooter") %>

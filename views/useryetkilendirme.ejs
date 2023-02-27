@@ -1,0 +1,320 @@
+<%- include("partials/header") %>
+  <%- include("partials/panel/panelHeader") %>
+
+    <body>
+
+      <%- include("partials/panel/panelnavbar") %>
+        <div id="useryetkilendirme" class="container-xxl flex-grow-1 container-p-y">
+          <h4 class="fw-bold py-3 mb-4">
+            <span class="text-muted fw-light">Üye Yetkilendirme /</span> Üyeler
+          </h4>
+          <!-- Accordion -->
+          <div class="row">
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+              <div class="accordion mt-3">
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                      Kullanıcı 1
+                    </button>
+                  </h2>
+
+                  <div id="accordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Kullanıcı Yetkisi</th>
+                            <th scope="col">Kayıtlı</th>
+                            <th scope="col">Değiştir</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- KULLANICI ROLU -->
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Rol</td>
+                            <td>user</td>
+                            <td>
+                              <select class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="pageadmin">Page Admin</option>
+                                <option value="user">User</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                           <!-- MAİL ONAY-->
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Mail Onay</td>
+                            <td>Onaylı</td>
+                            <td>
+                              <select class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="true">Onaylı</option>
+                                <option value="false">Onaylı Değil</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <!-- URUN ONAY -->
+                          <tr>
+                            <th scope="row">3</th>
+                            <td >Ürün Onay</td>
+                            <td >Kayıtlı Tüm Ürünleri Etkileyecektir</td>
+                            <td>
+                              <select  class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="true">Onaylı</option>
+                                <option value="false">Onay İptal</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <!-- ÜRÜN MİKTARI LİMİT -->
+                          <tr>
+                            <th scope="row">4</th>
+                            <td >Ürün Limiti</td>
+                            <td >5 default</td>
+                            <td>
+                              <select  class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="5">5 urun</option>
+                                <option value="10">10 urun</option>
+                                <option value="20">20 urun</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+              <div class="accordion mt-3">
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
+                      Kullanıcı 2
+                    </button>
+                  </h2>
+                  <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Kullanıcı Yetkisi</th>
+                            <th scope="col">Kayıtlı</th>
+                            <th scope="col">Değiştir</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Rol</td>
+                            <td>user</td>
+                            <td>
+                              <select class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="pageadmin">Page Admin</option>
+                                <option value="user">User</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Mail Onay</td>
+                            <td>Onaylı</td>
+                            <td>
+                              <select class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="true">Onaylı</option>
+                                <option value="false">Onaylı Değil</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Ürün Onay</td>
+                            <td>
+                              <select  class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="true">Onaylı</option>
+                                <option value="false">Onay İptal</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+              <div class="accordion mt-3">
+
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">
+                      Kullanıcı 3
+                    </button>
+                  </h2>
+                  <div id="accordionThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Kullanıcı Yetkisi</th>
+                            <th scope="col">Kayıtlı</th>
+                            <th scope="col">Değiştir</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Rol</td>
+                            <td>user</td>
+                            <td>
+                              <select class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="pageadmin">Page Admin</option>
+                                <option value="user">User</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Mail Onay</td>
+                            <td>Onaylı</td>
+                            <td>
+                              <select class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="true">Onaylı</option>
+                                <option value="false">Onaylı Değil</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Ürün Onay</td>
+                            <td>
+                              <select  class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="true">Onaylı</option>
+                                <option value="false">Onay İptal</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+              <div class="accordion mt-3">
+
+                <div class="card accordion-item">
+                  <h2 class="accordion-header">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#accordionFour" aria-expanded="false" aria-controls="accordionFour">
+                      Kullanıcı 4
+                    </button>
+                  </h2>
+                  <div id="accordionFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Kullanıcı Yetkisi</th>
+                            <th scope="col">Kayıtlı</th>
+                            <th scope="col">Değiştir</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Rol</td>
+                            <td>user</td>
+                            <td>Kayıtlı Tüm Ürünleri Etkileyecektir</td>
+                            <td>
+                              <select class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="pageadmin">Page Admin</option>
+                                <option value="user">User</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Mail Onay</td>
+                            <td>Onaylı</td>
+                            <td>
+                              <select class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="true">Onaylı</option>
+                                <option value="false">Onaylı Değil</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Ürün Onay</td>
+                            <td>
+                              <select  class="form-select">
+                                <option>Yetki Seçiniz</option>
+                                <option value="true">Onaylı</option>
+                                <option value="false">Onay İptal</option>
+                                <option value="askida">Askıda</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--/ Accordion -->
+        </div>
+
+
+
+
+
+
+
+        <%- include("partials/panel/panelFooter") %>

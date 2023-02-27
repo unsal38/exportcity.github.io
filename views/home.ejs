@@ -1,0 +1,1420 @@
+<%- include('partials/header')%>
+
+
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/assets/image/flagicon/fav.png">
+        <!-- PARTİAL HEADER -->
+
+    <link href="/assets/css/bootstrapCss/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/bootstrapCss/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="/assets/css/bootstrapCss/templatemo-kind-heart-charity.css">
+    <link rel="stylesheet" href="/assets/css/indexCss/style.css">
+
+
+
+    </head>
+
+    <body id="section_1">
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+
+                            <i class="fa fa-location-dot me-2"></i>
+                            Akershusstranda 20, 0150 Oslo, Norway
+                        </p>
+
+                        <p class="d-flex mb-0">
+                            <i class="fa fa-envelope me-2" aria-hidden="true"></i>
+                            <a href="mailto:info@company.com">
+                                info@company.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 col-12 ms-auto d-lg-block d-none">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <p class="social-icon-link mb-0 text-uppercase" lang="<%= lang _%> ">
+                                    <% if(user) {%>
+                                        <%= langDilJson.text1 _%>
+                                            <%= user.kullaniciAdi %>
+                                                <% } %>
+                                </p>
+                            </li>
+                            <li class="social-icon-item me-2">
+                                <select lang="<%= lang _%> " name="dilsec" class="rounded-pill border-0" style="background-color: #5bc1ac;">
+                                    <% if (lang==="tr" ) { %>
+                                        <option value="">Dil Seçiniz</option>
+                                        <option value="tr">Türkçe</option>
+                                        <option value="en">ingilizce</option>
+                                        <option value="fr">Fransızca</option>
+                                        <option value="ar">Arapça</option>
+                                        <% } else if(lang==="en" ) { %>
+                                            <option value="">Select Language</option>
+                                            <option value="tr">Turkish</option>
+                                            <option value="en">English</option>
+                                            <option value="fr">French</option>
+                                            <option value="ar">Arabic</option>
+                                            <% } else if(lang==="fr" ) { %>
+                                                <option value="">Choisir la langue</option>
+                                                <option value="tr">Turc</option>
+                                                <option value="en">Anglais</option>
+                                                <option value="fr">Français</option>
+                                                <option value="ar">Arabe</option>
+                                                <% } else if(lang==="ar" ) { %>
+                                                    <option value="">اختار اللغة</option>
+                                                    <option value="tr">اللغة التركية</option>
+                                                    <option value="en">إنجليزي</option>
+                                                    <option value="fr">فرنسي</option>
+                                                    <option value="ar">عربي</option>
+                                                    <% } %>
+                                </select>
+                            </li>
+                            <li class="social-icon-item">
+
+                                <a href="#" class="social-icon-link"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link"><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link"><i class="fa-brands fa-youtube"></i></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link"><i class="fa-brands fa-whatsapp"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container-fruid">
+                <a class="navbar-brand" href="#top">
+                    <img src="/assets/image/indeximg/logo.png" class="logo img-fluid ms-3" alt="E Export City">
+                    <span>
+                        E Export City
+                        <small>Export - İnport Organization</small>
+                    </span>
+                </a>
+
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item text-center">
+                            <a class="nav-link click-scroll text-capitalize" href="#top" lang="<%= lang _%> ">
+                                <%= langDilJson.text2 _%>
+                            </a>
+                        </li>
+
+                        <li class="nav-item text-center">
+                            <a class="nav-link click-scroll" href="#section_2">Hakkımızda</a>
+                        </li>
+
+                        <li class="nav-item text-center">
+                            <a class="nav-link click-scroll" href="#section_3">Yeni Eklenen Ürünler</a>
+                        </li>
+
+                        <li class="nav-item text-center">
+                            <a class="nav-link click-scroll" href="#section_4">Bizimle Çalışmak İstermisiniz</a>
+                        </li>
+
+                        <li class="nav-item dropdown text-center">
+                            <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+                                id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">İmport/Export</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="news.html">News Listing</a></li>
+
+                                <li><a class="dropdown-item" href="news-detail.html">News Detail</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item text-center">
+                            <a class="nav-link click-scroll" href="#section_6">İletişim</a>
+                        </li>
+                        <% if(user) {%>
+                            <!-- <li class="nav-item ms-3 text-center">
+                                    <a class="nav-link custom-btn custom-border-btn btn" href="panel">Panel</a>
+                                </li> -->
+                            <li class="nav-item text-center">
+                                <a class="nav-link click-scroll" href="panelDashboard">Panel</a>
+                            </li>
+
+                            <li class="nav-item ms-3 text-center">
+                                <a id="exit" class="nav-link custom-btn custom-border-btn btn"
+                                    href="javascript:void(0)">
+                                    <i style="font-size: 1.1rem;" class="fa-solid fa-door-open"></i>Çıkış</a>
+                            </li>
+                            <% }else { %>
+                                <li class="nav-item ms-3 text-center">
+                                    <a class="nav-link custom-btn custom-border-btn btn" href="login">Giriş/Kayıt</a>
+                                </li>
+                                <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- KİŞİ GİRİŞ YAPMADIYSA VEYA YETKİSİ YOKSA ALERT İÇİN KULLANILIYOR MODAL -->
+        <div id="alertmodal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">İşleminiz Yapılamadı!!</h5>
+                  <button type="button" class="close border-0 bg-transparent" data-dismiss="modal" aria-label="Close">
+                    <span><i class="fas fa-xmark"></i></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p id="modalalert"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!-- KİŞİ GİRİŞ YAPMADIYSA VEYA YETKİSİ YOKSA ALERT İÇİN KULLANILIYOR MODAL -->
+
+
+
+        <main>
+            <section class="hero-section hero-section-full-height">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 p-0">
+                            <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/assets/image/indeximg/slide/volunteer-helping-with-donation-box.jpg"
+                                            class="carousel-image img-fluid" alt="...">
+
+                                        <div class="carousel-caption d-flex flex-column justify-content-end">
+                                            <h1>reklam firma adı</h1>
+
+                                            <p>reklam firma açıklayıcı cümle</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="/assets/image/indeximg/slide/volunteer-selecting-organizing-clothes-donations-charity.jpg"
+                                            class="carousel-image img-fluid" alt="...">
+
+                                        <div class="carousel-caption d-flex flex-column justify-content-end">
+                                            <h1>reklam firma adı</h1>
+
+                                            <p>reklam firma açıklayıcı cümle</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="/assets/image/indeximg/slide/medium-shot-people-collecting-donations.jpg"
+                                            class="carousel-image img-fluid" alt="...">
+
+                                        <div class="carousel-caption d-flex flex-column justify-content-end">
+                                            <h1>reklam firma adı</h1>
+
+                                            <p>reklam firma açıklayıcı cümle</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12 text-center mx-auto">
+                            <h2 class="mb-5">E Exportcity Hizmetlerimiz</h2>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="featured-block d-flex justify-content-center align-items-center">
+                                <a href="#" class="d-block">
+                                    <img src="/assets/image/indeximg/icons/lojistik.png"
+                                        class="featured-block-image img-fluid" alt="">
+
+                                    <p class="featured-block-text">En Güvenli Şekilde<strong> ulaştırma</strong></p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                            <div class="featured-block d-flex justify-content-center align-items-center">
+                                <a href="#" class="d-block">
+                                    <img src="/assets/image/indeximg/icons/hands.png"
+                                        class="featured-block-image img-fluid" alt="">
+
+                                    <p class="featured-block-text"><strong>7/24</strong> Destek</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                            <div class="featured-block d-flex justify-content-center align-items-center">
+                                <a href="#" class="d-block">
+                                    <img src="/assets/image/indeximg/icons/yonlendirme.jpg"
+                                        class="featured-block-image img-fluid" alt="">
+
+                                    <p class="featured-block-text">İhtiyaca göre<strong> Yönlendirme</strong></p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="featured-block d-flex justify-content-center align-items-center">
+                                <a href="#" class="d-block">
+                                    <img src="/assets/image/indeximg/icons/export.png"
+                                        class="featured-block-image img-fluid" alt="">
+
+                                    <p class="featured-block-text"><strong>Güvenli</strong> Hizmet</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding section-bg" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                            <img src="/assets/image/indeximg/group-people-volunteering-foodbank-poor-people.jpg"
+                                class="custom-text-box-image img-fluid" alt="">
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="custom-text-box">
+                                <h2 class="mb-2">Bizim Hikayemiz</h2>
+
+                                <h5 class="mb-3">Kind Heart Charity, Non-Profit Organization</h5>
+
+                                <p class="mb-0">This is a Bootstrap 5.2.2 CSS template for charity organization
+                                    websites.
+                                    You can feel free to use it. Please tell your friends about TemplateMo website.
+                                    Thank
+                                    you.</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="custom-text-box mb-lg-0">
+                                        <h5 class="mb-3">Misyonumuz</h5>
+
+                                        <p>Sed leo nisl, posuere at molestie ac, suscipit auctor quis metus</p>
+
+                                        <ul class="custom-list mt-2">
+                                            <li class="custom-list-item d-flex">
+                                                <i class="bi-check custom-text-box-icon me-2"></i>
+                                                Charity Theme
+                                            </li>
+
+                                            <li class="custom-list-item d-flex">
+                                                <i class="bi-check custom-text-box-icon me-2"></i>
+                                                Semantic HTML
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
+                                        <div class="counter-thumb">
+                                            <div class="d-flex">
+                                                <span class="counter-number" data-from="1" data-to="2009"
+                                                    data-speed="1000"></span>
+                                                <span class="counter-number-text"></span>
+                                            </div>
+
+                                            <span class="counter-text">Üye Sayımız</span>
+                                        </div>
+
+                                        <div class="counter-thumb mt-4">
+                                            <div class="d-flex">
+                                                <span class="counter-number" data-from="1" data-to="120"
+                                                    data-speed="1000"></span>
+                                                <span class="counter-number-text">B</span>
+                                            </div>
+
+                                            <span class="counter-text">Ürün Sayımız</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="about-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 d-flex my-3">
+                            <div class="swiper temsilcisection">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide ">
+                                        <div class="col-lg-12 d-flex">
+                                            <div class="col-lg-6 d-flex">
+                                                <div class="col-lg-4 col-md-5 col-12">
+                                                    <img src="/assets/image/indeximg/portrait-volunteer-who-organized-donations-charity.jpg"
+                                                        class="about-image ms-lg-auto bg-light shadow-lg img-fluid"
+                                                        alt="Temsilci Resim">
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-12">
+                                                    <div class="custom-text-block">
+                                                        <h2 class="mb-0">Sandy Chan1</h2>
+
+                                                        <p class="text-muted mb-lg-4 mb-md-4">İngiltere Temsilcimiz</p>
+
+                                                        <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan
+                                                            omeg
+                                                            kohm tokito
+                                                            Professional
+                                                            charity theme based</p>
+
+                                                        <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris.
+                                                            Etiam quis
+                                                            metus</p>
+
+                                                        <ul class="social-icon mt-4">
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                                            </li>
+
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                                            </li>
+
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-instagram"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 d-flex">
+                                                <div class="col-lg-4 col-md-5 col-12">
+                                                    <img src="/assets/image/indeximg/portrait-volunteer-who-organized-donations-charity.jpg"
+                                                        class="about-image ms-lg-auto bg-light shadow-lg img-fluid"
+                                                        alt="Temsilci Resim">
+                                                </div>
+                                                <div class="col-lg-8 col-md-7 col-12">
+                                                    <div class="custom-text-block">
+                                                        <h2 class="mb-0">Sandy Chan1</h2>
+
+                                                        <p class="text-muted mb-lg-4 mb-md-4">İngiltere Temsilcimiz</p>
+
+                                                        <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan
+                                                            omeg
+                                                            kohm tokito
+                                                            Professional
+                                                            charity theme based</p>
+
+                                                        <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris.
+                                                            Etiam quis
+                                                            metus</p>
+
+                                                        <ul class="social-icon mt-4">
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                                            </li>
+
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                                            </li>
+
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-instagram"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h1>DİĞER TEMSİLCİLER1</h1>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h1>DİĞER TEMSİLCİLER2</h1>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h1>DİĞER TEMSİLCİLER3</h1>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section section-padding section-bg">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-5 col-12 ms-auto">
+                            <h2 class="mb-0">Bir etki yaratın <br> Hayatınız değişsin</h2>
+                        </div>
+
+                        <div class="col-lg-5 col-12">
+                            <a href="#" class="me-4">Bizimle.....</a>
+
+                            <a href="#section_4" class="custom-btn btn smoothscroll">İletişime geçin...</a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ÖNC GÖSTERİMDEKİ ÜRÜNLER 10 ADET PLANLI -------------------->
+            <!-- --------------------------------------------------------------- -->
+            <section class="section-padding" id="section_3">
+                <ul class="nav nav-pills mb-3 mx-5" id="pills-tab" role="tablist" style="justify-content: space-between;">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active bg-transparent" href="#" id="pills-export-tab" data-bs-toggle="pill" data-bs-target="#pills-export" role="tab" aria-controls="pills-export" aria-selected="true">
+                            <h2 class="text-uppercase" style="text-shadow: 5px 5px 0px rgb(206 89 55 / 32%);">Export </h2>
+                            
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link bg-transparent" href="#" id="pills-import-tab" data-bs-toggle="pill" data-bs-target="#pills-import" role="tab" aria-controls="pills-import" aria-selected="true">
+                            <h2 class="text-uppercase"  style="text-shadow: 5px 5px 0px rgb(206 89 55 / 32%);">İmport</h2>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link bg-transparent" href="#" id="pills-hizmet-tab" data-bs-toggle="pill" data-bs-target="#pills-hizmet" role="tab" aria-controls="pills-hizmet" aria-selected="true">
+                            <h2 class="text-uppercase"  style="text-shadow: 5px 5px 0px rgb(206 89 55 / 32%);">Hizmetler</h2>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="d-flex flex-row-reverse me-5" style="font-size: 23px;"><a href="urunlistele">Tümünü Gör <i class="fa-solid fa-angles-right"></i></a></div>    
+                    <div class="tab-pane fade show active" id="pills-export" role="tabpanel" aria-labelledby="pills-export-tab">
+                     <!-- EXPORT YENİ ÜRÜN -------------------->
+                    <!-- --------------------------------------------------------------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-12 text-center mb-4">
+                                    <h2 class="text-capitalize">Export Yeni Ürünler</h2>
+                                </div>
+                                <!-- Swiper -->
+                                <div class="swiper urunlermySwiper mt-4">
+                                    <div class="swiper-wrapper">
+                                        <% exportUrunDb.forEach((v, i)=> { %>
+                                            <%
+                                            if (lang === "tr" ) {
+                                            var urunBasligiDb=v.urunBasligi.tr
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.tr
+                                            } else if (lang==="en" ) {
+                                            var urunBasligiDb=v.urunBasligi.en
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.en
+                                            } else if (lang==="fr" ) {
+                                            var urunBasligiDb=v.urunBasligi.fr
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.fr
+                                            } else if (lang==="ar" ) {
+                                            var urunBasligiDb=v.urunBasligi.ar
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.ar
+                                            }
+                                            %>
+                                            <div class="swiper-slide">
+                                                <a href="urunlistele">
+                                                    <div class="mb-4 mb-lg-0 col-12">
+                                                        <div class="custom-block-wrap">
+                                                            <img src="/assets/image/urunimg/normal/<%= v.urunimg %> "
+                                                                alt="çok fonksiyonlu ürün" class="custom-block-image img-fluid">
+
+                                                            <div class="custom-block">
+                                                                <div class="custom-block-body">
+                                                                    <h5 class="mb-3 text-capitalize" lang="<%= lang _%> ">
+                                                                        <%= urunBasligiDb %>
+                                                                    </h5>
+                                                                    <p lang="<%= lang _%> " class="text-capitalize">
+                                                                        <%= aciklayiciMetinDb%>
+                                                                    </p>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize"><%= v.urunAnaKategori %>  / <%= v.biraltkategori %>  /</strong>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize"><%= v.ikialtkategori %> </strong>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize">Miktar</strong>
+                                                                            <%=v.enAzAlimMiktari_%>
+                                                                        </p>
+
+                                                                        <p class="ms-auto mb-0">
+                                                                            <strong class="text-capitalize">parça başı fiyatı</strong>
+                                                                            $<%= v.parcaBasiFiyat _%>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <a data-id="<%= v.firma_id _%>" 
+                                                                    href="firmabilgi"
+                                                                    class="custom-btn btn"
+                                                                    target="_blank">Firma
+                                                                    Bilgileri<i class="fa-solid fa-eye mx-2"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <% }); %>
+                                    </div>
+                                    <!-- <div class="swiper-pagination"></div>  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-import" role="tabpanel" aria-labelledby="pills-import-tab">
+                    <!-- İMPORT YENİ ÜRÜN -------------------->
+                    <!-- --------------------------------------------------------------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-12 text-center mb-4">
+                                    <h2 class="text-capitalize">İmport Yeni Ürünler</h2>
+                                </div>
+                                
+                                <!-- Swiper -->
+                                <div class="swiper urunlermySwiper mt-4">
+                                    <div class="swiper-wrapper">
+                                        <% importUrunDb.forEach((v, i)=> { %>
+                                            <%
+                                            if (lang === "tr" ) {
+                                            var urunBasligiDb=v.urunBasligi.tr
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.tr
+                                            } else if (lang==="en" ) {
+                                            var urunBasligiDb=v.urunBasligi.en
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.en
+                                            } else if (lang==="fr" ) {
+                                            var urunBasligiDb=v.urunBasligi.fr
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.fr
+                                            } else if (lang==="ar" ) {
+                                            var urunBasligiDb=v.urunBasligi.ar
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.ar
+                                            }
+                                            %>
+                                            <div class="swiper-slide">
+                                                <a href="urunlistele">
+                                                    <div class="mb-4 mb-lg-0 col-12">
+                                                        <div class="custom-block-wrap">
+                                                            <img src="/assets/image/urunimg/normal/<%= v.urunimg %> "
+                                                                alt="çok fonksiyonlu ürün" class="custom-block-image img-fluid">
+
+                                                            <div class="custom-block">
+                                                                <div class="custom-block-body">
+                                                                    <h5 class="mb-3 text-capitalize" lang="<%= lang _%> ">
+                                                                        <%= urunBasligiDb %>
+                                                                    </h5>
+                                                                    <p lang="<%= lang _%> " class="text-capitalize">
+                                                                        <%= aciklayiciMetinDb%>
+                                                                    </p>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize"><%= v.urunAnaKategori %>  / <%= v.biraltkategori %>  /</strong>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize"><%= v.ikialtkategori %> </strong>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize">Miktar</strong>
+                                                                            <%=v.enAzAlimMiktari_%>
+                                                                        </p>
+
+                                                                        <p class="ms-auto mb-0">
+                                                                            <strong class="text-capitalize">parça başı fiyatı</strong>
+                                                                            $<%= v.parcaBasiFiyat _%>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <a data-id="<%= v.firma_id _%>" 
+                                                                    href="firmabilgi"
+                                                                    class="custom-btn btn"
+                                                                    target="_blank">Firma
+                                                                    Bilgileri<i class="fa-solid fa-eye mx-2"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <% }); %>
+                                    </div>
+                                    <!-- <div class="swiper-pagination"></div>  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-hizmet" role="tabpanel" aria-labelledby="pills-hizmet-tab">
+                        <!-- HİZMETLER YENİ ÜRÜN -------------------->
+                        <!-- --------------------------------------------------------------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-12 text-center mb-4">
+                                    <h2 class="text-capitalize">Hizmetler Yeni Ürünler</h2>
+                                </div>
+                                <!-- Swiper -->
+                                <div class="swiper urunlermySwiper mt-4">
+                                    <div class="swiper-wrapper">
+                                        <% hizmetUrunDb.forEach((v, i)=> { %>
+                                            <%
+                                            if (lang === "tr" ) {
+                                            var urunBasligiDb=v.urunBasligi.tr
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.tr
+                                            } else if (lang==="en" ) {
+                                            var urunBasligiDb=v.urunBasligi.en
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.en
+                                            } else if (lang==="fr" ) {
+                                            var urunBasligiDb=v.urunBasligi.fr
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.fr
+                                            } else if (lang==="ar" ) {
+                                            var urunBasligiDb=v.urunBasligi.ar
+                                            var aciklayiciMetinDb=v.aciklayiciMetin.ar
+                                            }
+                                            %>
+                                            <div class="swiper-slide">
+                                                <a href="urunlistele">
+                                                    <div class="mb-4 mb-lg-0 col-12">
+                                                        <div class="custom-block-wrap">
+                                                            <img src="/assets/image/urunimg/normal/<%= v.urunimg %> "
+                                                                alt="çok fonksiyonlu ürün" class="custom-block-image img-fluid">
+
+                                                            <div class="custom-block">
+                                                                <div class="custom-block-body">
+                                                                    <h5 class="mb-3 text-capitalize" lang="<%= lang _%> ">
+                                                                        <%= urunBasligiDb %>
+                                                                    </h5>
+                                                                    <p lang="<%= lang _%> " class="text-capitalize">
+                                                                        <%= aciklayiciMetinDb%>
+                                                                    </p>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize"><%= v.urunAnaKategori %>  / <%= v.biraltkategori %>  /</strong>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize"><%= v.ikialtkategori %> </strong>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center my-2">
+                                                                        
+                                                                        <p class="mb-0">
+                                                                            <strong class="text-capitalize">Miktar</strong>
+                                                                            <%=v.enAzAlimMiktari_%>
+                                                                        </p>
+
+                                                                        <p class="ms-auto mb-0">
+                                                                            <strong class="text-capitalize">parça başı fiyatı</strong>
+                                                                            $<%= v.parcaBasiFiyat _%>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <a data-id="<%= v.firma_id _%>" 
+                                                                    href="firmabilgi"
+                                                                    class="custom-btn btn"
+                                                                    target="_blank">Firma
+                                                                    Bilgileri<i class="fa-solid fa-eye mx-2"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <% }); %>
+                                    </div>
+                                    <!-- <div class="swiper-pagination"></div>  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section class="volunteer-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <h2 class="text-white mb-4">İletişim</h2>
+
+                            <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                                <h3 class="mb-4">Temsilcimiz olmak İstermisiniz yada aklınıza takılan bir soru mu var
+                                </h3>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <input type="text" name="volunteer-name" id="volunteer-name"
+                                            class="form-control" placeholder="İsminiz" required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <input type="email" name="volunteer-email" id="volunteer-email"
+                                            pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Mail Adresiniz"
+                                            required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <input type="text" name="volunteer-subject" id="volunteer-subject"
+                                            class="form-control"
+                                            placeholder="iletişim konusu (Temsilci olmak istiyorum vb." required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <div class="input-group input-group-file">
+                                            <input type="file" class="form-control" id="inputGroupFile02">
+
+                                            <label class="input-group-text" for="inputGroupFile02">Özgeçmiş(CV)</label>
+
+                                            <i class="bi-cloud-arrow-up ms-auto"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
+                                    placeholder="Mesajınız (Min 20 max 180 karakter)"></textarea>
+
+                                <button type="submit" class="form-control">Gönder</button>
+                            </form>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <img src="/assets/image/indeximg/smiling-casual-woman-dressed-volunteer-t-shirt-with-badge.jpg"
+                                class="volunteer-image img-fluid" alt="">
+
+                            <div class="custom-block-body text-center">
+                                <h4 class="text-white mt-lg-3 mb-lg-3">Temsilcilik Hakkında</h4>
+
+                                <p class="text-white">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg
+                                    kohm
+                                    tokito Professional charity theme based</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="news-section section-padding" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 mb-5">
+                            <h2>Biliyormuydunuz....</h2>
+                        </div>
+                        <div class="col-lg-7 col-12">
+                            <div id="blogswiper" class="swiper blogswiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="news-block">
+                                            <div class="news-block-top">
+                                                <a href="news-detail.html">
+                                                    <img src="/assets/image/indeximg/news/medium-shot-volunteers-with-clothing-donations.jpg"
+                                                        class="news-image img-fluid" alt="">
+                                                </a>
+
+                                                <div class="news-category-block">
+                                                    <a href="#" class="category-block-link">
+                                                        Ticaret,
+                                                    </a>
+
+                                                    <a href="#" class="category-block-link">
+                                                        Clothing Donation
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="news-block-info">
+                                                <div class="d-flex mt-2">
+                                                    <div class="news-block-date">
+                                                        <p>
+                                                            <i class="bi-calendar4 custom-icon me-1"></i>
+                                                            October 12, 2036
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="news-block-author mx-5">
+                                                        <p>
+                                                            <i class="bi-person custom-icon me-1"></i>
+                                                            By Admin
+                                                        </p>
+                                                    </div>
+                                                    <!--                 
+                                                    <div class="news-block-comment">
+                                                        <p>
+                                                            <i class="bi-chat-left custom-icon me-1"></i>
+                                                            32 Comments
+                                                        </p>
+                                                    </div> -->
+                                                </div>
+
+                                                <div class="news-block-title mb-2">
+                                                    <h4><a href="news-detail.html"
+                                                            class="news-block-title-link">Clothing donation to
+                                                            urban area</a></h4>
+                                                </div>
+
+                                                <div class="news-block-body">
+                                                    <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg
+                                                        kohm tokito
+                                                        Professional charity theme based on Bootstrap</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="news-block mt-3">
+                                            <div class="news-block-top">
+                                                <a href="news-detail.html">
+                                                    <img src="/assets/image/indeximg/news/medium-shot-people-collecting-foodstuff.jpg"
+                                                        class="news-image img-fluid" alt="">
+                                                </a>
+
+                                                <div class="news-category-block">
+                                                    <a href="#" class="category-block-link">
+                                                        Ticaret,
+                                                    </a>
+
+                                                    <a href="#" class="category-block-link">
+                                                        Donation,
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="news-block-info">
+                                                <div class="d-flex mt-2">
+                                                    <div class="news-block-date">
+                                                        <p>
+                                                            <i class="bi-calendar4 custom-icon me-1"></i>
+                                                            October 20, 2036
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="news-block-author mx-5">
+                                                        <p>
+                                                            <i class="bi-person custom-icon me-1"></i>
+                                                            By Admin
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="news-block-comment">
+                                                        <p>
+                                                            <i class="bi-chat-left custom-icon me-1"></i>
+                                                            35 Comments
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="news-block-title mb-2">
+                                                    <h4><a href="news-detail.html" class="news-block-title-link">Food
+                                                            donation area</a>
+                                                    </h4>
+                                                </div>
+
+                                                <div class="news-block-body">
+                                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris.
+                                                        Etiam quis metus
+                                                        elementum, tempor risus vel, condimentum orci</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    <div class="swiper-slide">Slide 4</div>
+                                    <div class="swiper-slide">Slide 5</div>
+          
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12 mx-auto">
+                            <form class="custom-form search-form" action="#" method="post" role="form">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+
+                                <button type="submit" class="form-control">
+                                    <i class="bi-search"></i>
+                                </button>
+                            </form>
+
+                            <h5 class="mt-5 mb-3">Yeni Eklenenler</h5>
+
+                            <div class="news-block news-block-two-col d-flex mt-4">
+                                <div class="news-block-two-col-image-wrap">
+                                    <a href="#">
+                                        <img src="/assets/image/indeximg/news/africa-humanitarian-aid-doctor.jpg"
+                                            class="news-image img-fluid" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="news-block-two-col-info">
+                                    <div class="news-block-title mb-2">
+                                        <h6><a href="#" class="news-block-title-link">Food donation
+                                                area</a>
+                                        </h6>
+                                    </div>
+
+                                    <div class="news-block-date">
+                                        <p>
+                                            <i class="bi-calendar4 custom-icon me-1"></i>
+                                            October 16, 2036
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news-block news-block-two-col d-flex mt-4">
+                                <div class="news-block-two-col-image-wrap">
+                                    <a href="#">
+                                        <img src="/assets/image/indeximg/news/close-up-happy-people-working-together.jpg"
+                                            class="news-image img-fluid" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="news-block-two-col-info">
+                                    <div class="news-block-title mb-2">
+                                        <h6><a href="#" class="news-block-title-link">Volunteering
+                                                Clean</a>
+                                        </h6>
+                                    </div>
+
+                                    <div class="news-block-date">
+                                        <p>
+                                            <i class="bi-calendar4 custom-icon me-1"></i>
+                                            October 24, 2036
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="category-block d-flex flex-column">
+                                <h5 class="mb-3">Katagoriler</h5>
+
+                                <a href="#" class="category-block-link text-capitalize">
+                                    Yurt Dışı ticaret
+                                    <span class="badge">20</span>
+                                </a>
+
+                                <a href="#" class="category-block-link text-capitalize">
+                                    Food Donation
+                                    <span class="badge">30</span>
+                                </a>
+
+                                <a href="#" class="category-block-link text-capitalize">
+                                    Children Education
+                                    <span class="badge">10</span>
+                                </a>
+
+                                <a href="#" class="category-block-link text-capitalize">
+                                    Poverty Development
+                                    <span class="badge">15</span>
+                                </a>
+
+                                <a href="#" class="category-block-link text-capitalize">
+                                    Clothing Donation
+                                    <span class="badge">20</span>
+                                </a>
+                            </div>
+
+                            <div class="tags-block">
+                                <h5 class="mb-3">Tags</h5>
+
+                                <a href="#" class="tags-block-link">
+                                    Yurt Dışı ticaret
+                                </a>
+
+                                <a href="#" class="tags-block-link">
+                                    Clothing
+                                </a>
+
+                                <a href="#" class="tags-block-link">
+                                    Food
+                                </a>
+
+                                <a href="#" class="tags-block-link">
+                                    Children
+                                </a>
+
+                                <a href="#" class="tags-block-link">
+                                    Education
+                                </a>
+
+                                <a href="#" class="tags-block-link">
+                                    Poverty
+                                </a>
+
+                                <a href="#" class="tags-block-link">
+                                    Clean Water
+                                </a>
+                            </div>
+
+                            <form class="custom-form subscribe-form" action="#" method="post" role="form">
+                                <h5 class="mb-4 text-capitalize">E posta aboneliği</h5>
+
+                                <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
+                                    class="form-control" placeholder="Mail Adresiniz" required>
+
+                                <div class="col-lg-12 col-12">
+                                    <button type="submit" class="form-control">Üye Ol</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                </div>
+            </section>
+
+
+            <section class="testimonial-section section-padding section-bg">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h2 class="mb-lg-3 text-capitalize">Referanslarımız</h2>
+
+                            <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="carousel-caption">
+                                            <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur
+                                                adipsicing
+                                                kengan omeg kohm tokito charity theme</h4>
+
+                                            <small class="carousel-name"><span class="carousel-name-title">Maria</span>,
+                                                Boss</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="carousel-caption">
+                                            <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit
+                                                auctor
+                                                mauris quis metus tempor orci</h4>
+
+                                            <small class="carousel-name"><span
+                                                    class="carousel-name-title">Thomas</span>,
+                                                Partner</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="carousel-caption">
+                                            <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur
+                                                adipsicing
+                                                kengan omeg kohm tokito charity theme</h4>
+
+                                            <small class="carousel-name"><span class="carousel-name-title">Jane</span>,
+                                                Advisor</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="carousel-caption">
+                                            <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit
+                                                auctor
+                                                mauris quis metus tempor orci</h4>
+
+                                            <small class="carousel-name"><span class="carousel-name-title">Bob</span>,
+                                                Entreprenuer</small>
+                                        </div>
+                                    </div>
+
+                                    <ol class="carousel-indicators">
+                                        <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
+                                            <img src="/assets/image/indeximg/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg"
+                                                class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                        </li>
+
+                                        <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
+                                            <img src="/assets/image/indeximg/avatar/portrait-young-redhead-bearded-male.jpg"
+                                                class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                        </li>
+
+                                        <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
+                                            <img src="/assets/image/indeximg/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
+                                                class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                        </li>
+
+                                        <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
+                                            <img src="/assets/image/indeximg/avatar/studio-portrait-emotional-happy-funny.jpg"
+                                                class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                        </li>
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="contact-section section-padding" id="section_6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+                            <div class="contact-info-wrap">
+                                <h2>Get in touch</h2>
+
+                                <div class="contact-image-wrap d-flex flex-wrap">
+                                    <img src="/assets/image/indeximg/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
+                                        class="img-fluid avatar-image" alt="personel resmi">
+
+                                    <div class="d-flex flex-column justify-content-center ms-3">
+                                        <p class="mb-0">Clara Barton</p>
+                                        <p class="mb-0"><strong>HR & Office Manager</strong></p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info">
+                                    <h5 class="mb-3">Contact Infomation</h5>
+
+                                    <p class="d-flex mb-2">
+                                        <i class="bi-geo-alt me-2"></i>
+                                        Akershusstranda 20, 0150 Oslo, Norway
+                                    </p>
+
+                                    <p class="d-flex mb-2">
+                                        <i class="bi-telephone me-2"></i>
+
+                                        <a href="tel: 305-240-9671">
+                                            305-240-9671
+                                        </a>
+                                    </p>
+
+                                    <p class="d-flex">
+                                        <i class="bi-envelope me-2"></i>
+
+                                        <a href="mailto:info@yourgmail.com">
+                                            donate@charity.org
+                                        </a>
+                                    </p>
+
+                                    <!-- <a href="#" class="custom-btn btn mt-3">Yönetici İle görüşün</a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12 mx-auto">
+                            <form class="custom-form contact-form" action="#" method="post" role="form">
+                                <h2 class="text-capitalize">Site Üyeliğinde Problem mi yaşıyorsunuz ??</h2>
+
+                                <p class="mb-4">Or, you can just send an email:
+                                    <a href="#">info@charity.org</a>
+                                </p>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <input type="text" name="first-name" id="first-name" class="form-control"
+                                            placeholder="İsim" required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <input type="text" name="last-name" id="last-name" class="form-control"
+                                            placeholder="Soyisim" required>
+                                    </div>
+                                </div>
+
+                                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
+                                    placeholder="Mail Adresiniz" required>
+
+                                <textarea name="message" rows="5" class="form-control" id="message"
+                                    placeholder="Nasıl Yardımcı Olabiliriz ??"></textarea>
+
+                                <button type="submit" class="form-control">Gönder</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-4">
+                        <img src="/assets/image/indeximg/logo.png" class="logo img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <h5 class="site-footer-title mb-3 text-capitalize">Hızlı Erişim</h5>
+
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Our Story</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Newsroom</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a>
+                            </li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                        <h5 class="site-footer-title mb-3">İletişim</h5>
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="fa-solid fa-square-phone m-1"></i>
+
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                                305-240-9671
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="fa-regular fa-envelope m-1"></i>
+
+                            <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                donate@charity.org
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex mt-3">
+                            <i class="fa-solid fa-location-dot m-1"></i>
+                            Akershusstranda 20, 0150 Oslo, Norway
+                        </p>
+
+                        <!-- <a href="#" class="custom-btn btn mt-3">Get Direction</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-7 col-12">
+                            <p class="copyright-text mb-0">Copyright © 2022 <a href="#">E Exportcity</a> Org.
+                                Design: <a href="#" target="_blank">metin</a><br>Distribution:
+                                <a href="#">metin</a>
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link"><i class="fa-brands fa-twitter"></i></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link"><i class="fa-brands fa-facebook"></i></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link"><i class="fa-brands fa-instagram"></i></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link"><i class="fa-brands fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- FOOTER PARTİAL-->
+
+        <%- include("partials/footer") %>
+
+            <!-- FOOTER PARTİAL-->
+
+            <script src="/assets/js/jqueryJs/jquery.sticky.js"></script>
+            <script src="/assets/js/indexJs/click-scroll.js"></script>
+            <script src="/assets/js/indexJs/counter.js"></script>
+            <script src="/assets/js/indexJs/custom.js"></script>
+            <script src="/assets/js/indexJs/index.js"></script>
+
+
+
+    </body>
+
+    </html>

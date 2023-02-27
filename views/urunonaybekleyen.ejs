@@ -1,0 +1,145 @@
+<%- include("partials/header") %>
+  <%- include("partials/panel/panelHeader") %>
+
+    <body>
+      <%- include("partials/panel/panelnavbar") %>
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <h4 class="fw-bold py-3 mb-4">
+              <span class="text-muted fw-light">Üye İşlemleri /</span> Onay Bekleyen Ürünler
+            </h4>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-2">
+                      <img class="card-img card-img-left"
+                        src="/assets/image/urunimg/normal/urunimg-1673498391939-135199467.jpg" alt="urun image">
+                    </div>
+                    <div class="col-md-10">
+                      <div class="card-body pb-0">
+                        <div class="col-xl-12">
+                          <div class="nav-align-top">
+                            <ul class="nav nav-tabs" role="tablist">
+                              <li class="nav-item">
+                                <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                                  data-bs-target="#navs-top-turkce" aria-controls="navs-top-turkce"
+                                  aria-selected="true">
+                                  Türkçe
+                                </button>
+                              </li>
+                              <li class="nav-item">
+                                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                  data-bs-target="#navs-top-ingilizce" aria-controls="navs-top-ingilizce"
+                                  aria-selected="false">
+                                  İngilizce
+                                </button>
+                              </li>
+                              <li class="nav-item">
+                                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                  data-bs-target="#navs-top-fransızca" aria-controls="navs-top-fransızca"
+                                  aria-selected="false">
+                                  Fransızca
+                                </button>
+                              </li>
+                              <li class="nav-item">
+                                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                  data-bs-target="#navs-top-arapca" aria-controls="navs-top-arapca"
+                                  aria-selected="false">
+                                  Arapça
+                                </button>
+                              </li>
+                            </ul>
+                            <div class="tab-content">
+                              <div class="tab-pane fade show active" id="navs-top-turkce" role="tabpanel">
+                                <p class="card-title">
+                                  ürün başlığı türkçe
+                                </p>
+                                <p class="card-text mb-0">
+                                  ürün açıklaması türkçe Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes
+                                  wafer carrot cake jelly.
+                                  Bonbon
+                                </p>
+                              </div>
+                              <div class="tab-pane fade" id="navs-top-ingilizce" role="tabpanel">
+                                <p class="card-title">
+                                  ürün başlığı ingilizce
+                                </p>
+                                <p class="card-text mb-0">
+                                  ürün açıklaması ingilizce Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes
+                                  wafer carrot cake jelly.
+                                  Bonbon
+                                </p>
+                              </div>
+                              <div class="tab-pane fade" id="navs-top-fransızca" role="tabpanel">
+                                <p class="card-title">
+                                  ürün başlığı fransızce
+                                </p>
+                                <p class="card-text mb-0">
+                                  ürün açıklaması fransızca Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes
+                                  wafer carrot cake jelly.
+                                  Bonbon
+                                </p>
+                              </div>
+                              <div class="tab-pane fade" id="navs-top-arapca" role="tabpanel">
+                                <p class="card-title">
+                                  ürün başlığı arapça
+                                </p>
+                                <p class="card-text mb-0">
+                                  ürün açıklaması arapça Tootsie roll fruitcake cookie. Dessert topping pie. Jujubes
+                                  wafer carrot cake jelly.
+                                  Bonbon
+                                </p>
+                              </div>
+                            </div>
+                            <div class="card-footer pb-0">
+                              <p>en az alım:24</p>
+                              <p>parça başı fiyatı :$ 24</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-footer pt-1">
+                        <a class="card-link text-success" href="#"><i
+                            class="fa-regular fa-thumbs-up me-1"></i>Onayla</a>
+                        <!-- Button trigger modal -->
+                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#urunredmessage"
+                          class="card-link text-danger" href="#"><i class="fa-regular fa-circle-xmark me-1"></i>Red</a>
+                        <!-- RED MESSAGE Modal -->
+                        <div class="modal fade" id="urunredmessage" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1">Mesajınız</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="row">
+                                  <div class="col mb-3">
+                                    <input type="text" id="nameBasic" class="form-control"
+                                      placeholder="Mesajınızı yazınız" />
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Kaydet</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <%- include("partials/panel/panelFooter") %>

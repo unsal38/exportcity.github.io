@@ -1,0 +1,315 @@
+<!-- Footer -->
+<footer class="content-footer footer bg-footer-theme">
+  <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+    <div class="mb-2 mb-md-0">
+      ©
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      , made with ❤️ by
+      <a href="#" target="_blank" class="footer-link fw-bolder">Ünsal ÖZKARA</a>
+    </div>
+    <!-- <div>
+                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+
+                  <a
+                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Documentation</a
+                  >
+
+                  <a
+                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Support</a
+                  >
+                </div> -->
+  </div>
+</footer>
+<!-- / Footer -->
+
+<div class="content-backdrop fade"></div>
+</div>
+<!-- Content wrapper -->
+</div>
+<!-- / Layout page -->
+</div>
+
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
+</div>
+<!-- / Layout wrapper -->
+
+<div class="buy-now">
+
+  <% if (user) { %>
+
+    <% if(user.kullaniciOnay===true) { %>
+      <a href="javascript:void(0)" class="btn btn-success btn-buy-now">Üyelik Ücretini Ödediğiniz için
+        teşekkür ederiz</a>
+      <% } else if(user.kullaniciOnay===false) { %>
+        <a href="javascript:void(0)" class="btn btn-danger btn-buy-now" data-bs-toggle="modal"
+          data-bs-target="#odememodalToggle">Üyelik Ücreti Ödenmemiştir</a>
+        <% } %>
+          <% } %>
+
+
+
+</div>
+
+
+
+<!-- MODAL BAŞLANGIÇ -->
+<!-- Modal 1-->
+<div class="modal fade" id="odememodalToggle" aria-labelledby="modalToggleLabel" tabindex="-1" style="display: none"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-capitalize" id="modalToggleLabel">ödeme Bilgileri</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Basic Layout -->
+          <div class="col-xxl">
+            <div class="card mb-4">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Ürün Bilgileri</h5>
+                <small id="odemealert" class="float-end text-danger text-uppercase">alert</small>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label text-capitalize" for="basic-default-name">Firma Adı</label>
+                    <div class="col-sm-9">
+
+                      <!-- DÜZENLENECEK BÖLÜM UNUTMA DB DEN ÇEKİLECEK YOKSA ALERT VERİLECEK -->
+
+                      <input type="text" class="form-control" placeholder="bilmemne firması" readonly />
+
+
+                      <!-- DÜZENLENECEK BÖLÜM UNUTMA -->
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label text-capitalize">Hesap
+                      numarası</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="Ürünü Açıklayıcı Metni Giriniz"
+                        maxlength="180" />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label text-capitalize">ödenen
+                      miktar</label>
+                    <div class="col-sm-9">
+                      <input type="number" class="form-control" placeholder="Alım Miktarını Giriniz" maxlength="10" />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="smallSelect" class="col-sm-3 col-form-label text-capitalize">para
+                      cinsi</label>
+                    <div class="col-sm-9">
+                      <select id="smallSelect" class="form-select form-select-sm">
+                        <option>Seçiniz</option>
+                        <option value="1">Dolar</option>
+                        <option value="2">Tl</option>
+                        <option value="3">Arap Dinarı</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row justify-content-end">
+                    <div class="col-sm-10">
+                      <button type="submit" class="btn btn-primary text-capitalize">Kaydet</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#odememodalToggle2" data-bs-toggle="modal"
+          data-bs-dismiss="modal">
+          Sonraki Bölüm
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 2-->
+<div class="modal fade" id="odememodalToggle2" aria-hidden="true" aria-labelledby="modalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-capitalize" id="modalToggleLabel2">ÖDEME İLE İLGİLİ BİLGİLENDİRME</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+
+        <div class="card-body w-100">
+          <!-- <div class="row gy-3"> -->
+          <div class="col-lg-12 d-flex" style="flex-direction: column;">
+            <div class="col-lg-12">
+              <p>Ödeme yapıldıktan sonra kontrol sonrasında panel ana sayfasında gösterilecektir.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem modi dolore explicabo optio ut a
+                rchitecto similique tempore aliquam error nam consequuntur, officiis ex. Omnis mollitia rerum
+                voluptates, sapiente tempore vero!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem modi dolore explicabo optio ut a
+                rchitecto similique tempore aliquam error nam consequuntur, officiis ex. Omnis mollitia rerum
+                voluptates, sapiente tempore vero!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem modi dolore explicabo optio ut a
+                rchitecto similique tempore aliquam error nam consequuntur, officiis ex. Omnis mollitia rerum
+                voluptates, sapiente tempore vero!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem modi dolore explicabo optio ut a
+                rchitecto similique tempore aliquam error nam consequuntur, officiis ex. Omnis mollitia rerum
+                voluptates, sapiente tempore vero!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem modi dolore explicabo optio ut a
+                rchitecto similique tempore aliquam error nam consequuntur, officiis ex. Omnis mollitia rerum
+                voluptates, sapiente tempore vero!</p>
+
+            </div>
+            <div class="col-lg-12 d-flex">
+              <div class="col-lg-4">
+                <small class="text-light fw-semibold text-capitalize">Bilgilendirmeleri Okudum</small>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="true" id="bilgilendirme" />
+                  <label class="form-check-label" for="bilgilendirme"> Checked </label>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <small class="text-light fw-semibold text-capitalize">Sözleşme 1 kabul ediyorum</small>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="true" id="sozlesme1" />
+                  <label class="form-check-label" for="sozlesme1"> Checked </label>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" value="" id="disabledCheck1" disabled />
+                                          <label class="form-check-label" for="disabledCheck1"> Disabled Unchecked </label>
+                                        </div> -->
+            <!-- <div class="form-check">
+                                          <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            value=""
+                                            id="disabledCheck2"
+                                            disabled
+                                            checked
+                                          />
+                                          <label class="form-check-label" for="disabledCheck2"> Disabled Checked </label>
+                                        </div> -->
+          </div>
+
+
+          <!-- <div class="col-md">
+                                        <small class="text-light fw-semibold">Radio</small> -->
+          <!-- <div class="form-check mt-3">
+                                          <input
+                                            name="default-radio-1"
+                                            class="form-check-input"
+                                            type="radio"
+                                            value=""
+                                            id="defaultRadio1"
+                                          />
+                                          <label class="form-check-label" for="defaultRadio1"> Unchecked </label>
+                                        </div> -->
+          <!-- <div class="form-check">
+                                          <input
+                                            name="default-radio-1"
+                                            class="form-check-input"
+                                            type="radio"
+                                            value=""
+                                            id="defaultRadio2"
+                                            checked
+                                          />
+                                          <label class="form-check-label" for="defaultRadio2"> Checked </label>
+                                        </div> -->
+          <!-- <div class="form-check">
+                                          <input class="form-check-input" type="radio" value="" id="disabledRadio1" disabled />
+                                          <label class="form-check-label" for="disabledRadio1"> Disabled unchecked </label>
+                                        </div> -->
+          <!-- <div class="form-check">
+                                          <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            value=""
+                                            id="disabledRadio2"
+                                            disabled
+                                            checked
+                                          />
+                                          <label class="form-check-label" for="disabledRadio2"> Disabled checkbox </label>
+                                        </div> -->
+          <!-- </div> -->
+
+
+
+          <!-- </div> -->
+
+        </div>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#odememodalToggle" data-bs-toggle="modal"
+          data-bs-dismiss="modal">
+          Önceki Bölüm
+        </button>
+        <button class="btn btn-primary text-capitalize" data-bs-dismiss="modal">
+          Kapat
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
+<script src="/assets/js/jqueryJs/jquery.js"></script>
+<script src="/assets/js/panelJs/popper/popper.js"></script>
+<!-- <script src="/assets/js/bootstrapJs/bootstrap.js"></script> -->
+<script src="/assets/js/bootstrapJs/bootstrap.js"></script>
+<script src="/assets/css/panelCss/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+<script src="/assets/js/panelJs/menu.js"></script>
+<!-- endbuild -->
+
+<!-- Vendors JS -->
+<script src="/assets/css/panelCss/apex-charts/apexcharts.js"></script>
+
+<!-- Main JS -->
+<script src="/assets/js/panelJs/main.js"></script>
+
+<!-- Page JS -->
+<script src="/assets/js/panelJs/dashboards-analytics.js"></script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/assets/js/page.js"></script>
+<script src = "/assets/js/panelJs/pagePanel.js"></script>
+</body>
+
+</html>

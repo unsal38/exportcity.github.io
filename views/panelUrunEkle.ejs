@@ -1,0 +1,258 @@
+<%- include("partials/header") %>
+    <%- include("partials/panel/panelHeader") %>
+
+        <body>
+            <%- include("partials/panel/panelnavbar") %>
+                <div class="content-wrapper col-lg-12">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Hesap Ayarları/</span> Ürün Ekle
+                        </h4>
+
+                        <!-- Basic Layout & Basic with Icons -->
+                        <div class="row">
+                            <!-- Basic Layout -->
+
+                            <div id="alert"></div>
+                            <div class="col-xxl">
+                                <div class="card mb-4">
+                                    <div class="card-header d-flex align-items-center justify-content-between">
+                                        <h5 class="mb-0">Ürün Bilgileri</h5>
+                                        <small id="alert" class="float-end text-danger text-uppercase">alert</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <form id="formurun">
+                                            <!-- ÜYE İD -->
+                                            <div class="row mb-3">
+                                                <label class="col-sm-2 col-form-label sr-only"
+                                                    for="basic-default-name"></label>
+                                                <div class="col-sm-10">
+                                                    <input name="firma_id" type="text" class="form-control sr-only"
+                                                        placeholder="Ürün Başlığı Ekleyiniz" minlength="5"
+                                                        maxlength="20" value="<%= user.id %> " />
+                                                </div>
+                                            </div>
+                                            <!-- ÜRÜN BAŞLIĞI -->
+                                            <div class="row mb-3">
+                                                <label class="col-sm-2 col-form-label" for="basic-default-name">Ürün
+                                                    Başlığı</label>
+                                                <div class="col-sm-10">
+                                                    <input name="urunBasligi" type="text" class="form-control"
+                                                        placeholder="Ürün Başlığı Ekleyiniz" minlength="5"
+                                                        maxlength="20" required />
+                                                </div>
+                                            </div>
+                                            <!-- AÇIKLAYICI METİN -->
+                                            <div class="row mb-3">
+                                                <label class="col-sm-2 col-form-label">Açıklayıcı Metin</label>
+                                                <div class="col-sm-10">
+                                                    <input name="aciklayiciMetin" type="text" class="form-control"
+                                                        placeholder="Ürünü Açıklayıcı Metni Giriniz" maxlength="180"
+                                                        required />
+                                                </div>
+                                            </div>
+                                            <!-- EN AZ ALIM MİKTARI -->
+                                            <div class="miktar row mb-3 close">
+                                                <label class="col-sm-2 col-form-label">En Az Alım Miktarı</label>
+                                                <label class="col-sm-2 col-form-label">Miktar Giriniz</label>
+                                                <div class="col-sm-10">
+                                                    <input name="enAzAlimMiktari" type="number" class="form-control"
+                                                        placeholder="Alım Miktarını Giriniz" maxlength="10"/>
+                                                </div>
+                                            </div>
+                                            <!-- PARÇA BAŞI FİYATI -->
+                                            <div class="fiyat row mb-3 close">
+                                                <label class="col-sm-2 col-form-label close">Parça Başı Fiyatı</label>
+                                                <label class="col-sm-2 col-form-label close">Hizmet Ücreti</label>
+                                                <div class="col-sm-10">
+                                                    <input name="parcaBasiFiyat" type="number" class="form-control"
+                                                        placeholder="Fiyat Bilgisi Giriniz" maxlength="10"
+                                                         />
+                                                </div>
+                                            </div>
+                                            <!--SATIŞ CİNSİ İMPORT / EXPORT / HİZMET-->
+                                            <div class="row mb-3">
+                                                <label class="col-sm-2 col-form-label">Satış Çeşidi</label>
+                                                <div class="col-sm-10">
+                                                    <select name="satis" id="satis" class="form-select">
+                                                        <option value="null">Satış Cinsi</option>
+                                                        <option value="export">Export</option>
+                                                        <option value="import">İmport</option>
+                                                        <option value="hizmet">Hizmet</option>
+                                                      </select>
+                                                </div>
+                                            </div>
+                                            <!-- KATEGORİ SEÇ -->
+                                            <div class="card-body demo-vertical-spacing demo-only-element">
+                                                <!-- MODAL URUN ANA KATEGORİ -->
+                                                <div class="input-group">
+                                                    <div class="modal fade" id="anaKategoriexLargeModal" tabindex="-1"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-xl" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel4">
+                                                                        Ana Kategoride Ekleyebileceğiniz Ürünler</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p>Lorem ipsum, dolor sit amet consectetur
+                                                                        adipisicing elit.
+                                                                        Magni quos obcaecati voluptatum minima qui eaque
+                                                                        ullam neque modi dicta
+                                                                        illum natus iure voluptates, fugit deserunt
+                                                                        cumque, perspiciatis esse
+                                                                        veniam voluptas!
+                                                                    </p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-secondary"
+                                                                        data-bs-dismiss="modal">
+                                                                        Close
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#anaKategoriexLargeModal">
+                                                        Ana Kategoride Eklenebilecek Ürünler
+                                                    </button>
+                                                    <select name="anakategoriinputGroupSelect" class="form-select" id="anakategoriinputGroupSelect">
+                                                        <option value="null">Ana Kategori</option>
+                                                        <% urunAnaKategori.forEach(anakategori => { %> 
+                                                            <option data-id="<%= anakategori.id _%> " value=<%= anakategori.urunAnaKategori.tr%>><%= anakategori.urunAnaKategori.tr%></option>
+                                                            <% }); %> 
+
+                                                    </select>
+                                                </div>
+                                                <!-- MODAL URUN ANA KATEGORİ SON -->
+                                                <!-- MODAL URUN BİR ALT KATEGORİ -->
+                                                <div class="input-group">
+                                                    <div class="modal fade" id="biraltKategoriexLargeModal"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <div class="modal-dialog modal-xl" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel4">
+                                                                        Bir Alt Ekleyebileceğiniz Ürünler</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p>Lorem ipsum, dolor sit amet consectetur
+                                                                        adipisicing elit.
+                                                                        Magni quos obcaecati voluptatum minima qui eaque
+                                                                        ullam neque modi dicta
+                                                                        illum natus iure voluptates, fugit deserunt
+                                                                        cumque, perspiciatis esse
+                                                                        veniam voluptas!
+                                                                    </p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-secondary"
+                                                                        data-bs-dismiss="modal">
+                                                                        Close
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#biraltKategoriexLargeModal">
+                                                        Bir Alt Kategoride Eklenebilecek Ürünler
+                                                    </button>
+                                                    <select name="biraltinputGroupSelect" class="form-select" id="biraltinputGroupSelect">
+                                                        <option data-kategoriid="null" data-anakategori="null" value="null">Bir Alt Kategori</option>
+                                                        <% urunBirAltkategori.forEach(biraltkategori => { %>
+                                                        <option data-kategoriid="<%= biraltkategori.id %> " data-anakategori="<%= biraltkategori.urunAnaKategori_id_%>" 
+                                                                value="<%= biraltkategori.urunBirAltkategori.tr%>">
+                                                            <%= biraltkategori.urunBirAltkategori.tr%>
+                                                        </option>
+                                                            <% }); %>
+                                                        </select>
+                                                </div>
+                                                <!-- MODAL URUN BİR ALT KATEGORİ SON -->
+                                                <!-- MODAL URUN İKİ ALT KATEGORİ -->
+                                                <div class="input-group">
+                                                    <div class="modal fade" id="ikialtKategoriexLargeModal"
+                                                        tabindex="-1" aria-hidden="true">
+                                                        <div class="modal-dialog modal-xl" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel4">
+                                                                        İki Alt Ekleyebileceğiniz Ürünler</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p>Lorem ipsum, dolor sit amet consectetur
+                                                                        adipisicing elit.
+                                                                        Magni quos obcaecati voluptatum minima qui eaque
+                                                                        ullam neque modi dicta
+                                                                        illum natus iure voluptates, fugit deserunt
+                                                                        cumque, perspiciatis esse
+                                                                        veniam voluptas!
+                                                                    </p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-secondary"
+                                                                        data-bs-dismiss="modal">
+                                                                        Close
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#ikialtKategoriexLargeModal">
+                                                        İki Alt Kategoride Eklenebilecek Ürünler
+                                                    </button>
+                                                    <select name="ikialtinputGroupSelect" class="form-select" id="ikialtinputGroupSelect">
+                                                        <option data-biraltkategori="null" value="null">İki Alt Kategori</option>
+                                                        <% urunikiAltkategori.forEach(ikialtkategori => { %> 
+                                                        <option data-biraltkategori="<%= ikialtkategori.urunBirAltkategori_id_%>" 
+                                                                value="<%= ikialtkategori.urunikiAltkategori.tr%>">
+                                                                <%= ikialtkategori.urunikiAltkategori.tr%>
+                                                        </option>
+                                                            <% }); %>
+                                                    </select>
+                                                </div>
+                                                <!-- MODAL URUN İKİ ALT KATEGORİ SON -->
+                                            </div>
+                                            <!-- KATEGORİ SEÇ -->
+                                            <!-- RESİM YÜKLE -->
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="inputGroupFile02">Ürün Resim
+                                                    Yükle</label>
+                                                <input name="urunimg" type="file" class="form-control"
+                                                    id="inputGroupFile02" />
+
+                                            </div>
+                                            <!-- BUTTON -->
+                                            <div class="row justify-content-end">
+                                                <div class="col-sm-10">
+                                                    <button name="urunyukle" type="submit"
+                                                        class="btn btn-primary">Kaydet</button>
+                                                    <button name="reset" type="reset"
+                                                        class="btn btn-outline-secondary">Resetle</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%- include("partials/panel/panelFooter") %>
