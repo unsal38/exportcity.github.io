@@ -1,0 +1,97 @@
+div.row-reverse div.col-6:nth-child(odd) div.row {
+    flex-direction: row-reverse;
+}
+
+form#formurun .close {
+    display: none;
+}
+div#kategori .abonelik{
+    border-radius: 25px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+div#kategori .abonelik .metin a:hover{
+    color: red;
+}
+div#kategori .abonelik:nth-child(1) h5{
+   text-shadow: -1px 0px 16px #000000;
+   color: #0000008a;
+   font-size: 20px;
+   background-color: azure;
+   border-radius: 15px;
+}
+div#kategori .abonelik:nth-child(1) .metin{
+    opacity: 0;
+    transition-duration: 3s;
+}
+div#kategori .abonelik:nth-child(1):hover .metin{
+    opacity: 1;
+    transition-duration: 3s;
+
+}
+div#kategori .abonelik:nth-child(1) .metin{
+    color: white;
+    background-color: #000000a8;
+    text-align: center;
+}
+div#kategori .abonelik:nth-child(1) .metin label{
+    color: white;
+    text-align: center;
+}
+div#kategori .abonelik:nth-child(1) select{
+    color: white;
+} 
+div#kategori .abonelik select{
+    background: transparent;
+    border: 0;
+}
+div#kategori .abonelik:hover {
+    box-shadow: 6px 6px 4px #00000087;
+}
+div#kategori .abonelik:nth-child(2),
+div#kategori .abonelik:nth-child(2) .metin label, 
+div#kategori .abonelik:nth-child(2) .metin select{
+    color: transparent;
+    background-color: transparent;
+    text-align: center;
+    transition-duration: 3s;
+}
+div#kategori .abonelik:nth-child(2):hover .metin{
+    color: white;
+    background-color: #000000a8;
+    transition-duration: 3s;
+}
+div#kategori .abonelik:nth-child(2):hover .metin label, 
+div#kategori .abonelik:nth-child(2):hover .metin select,
+div#kategori .abonelik:nth-child(2):hover a{
+    color: white;
+    transition-duration: 3s;
+}
+div#kategori .abonelik:nth-child(2) a:hover{
+    color: red;
+    transition-duration: 1s;
+}
+
+div#kategori .abonelik:nth-child(1) {
+    background-image: url('/assets/image/panelimg/abonelik1.png');
+    background-repeat: no-repeat;
+    /* background-origin: content-box; */
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: contain;
+}
+div#kategori .abonelik:nth-child(2) {
+    background-image: url('/assets/image/panelimg/abonelik2.png');
+    background-repeat: no-repeat;
+    /* background-origin: content-box; */
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: contain;
+}
+
+div#kategori .abonelik .card {
+    background-color: transparent;
+}
+div#kategori .abonelik .card a{
+    color: inherit;
+}

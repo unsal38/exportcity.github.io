@@ -1,0 +1,80 @@
+
+#pills-tab a.active h2::after{
+  content: '\f101';
+  font-family: "Font Awesome 6 free";
+}
+
+
+
+/* #section_3 img{
+    max-height: 240px;
+} */
+
+.section-padding  img.featured-block-image{
+    width: 128px;
+    height: 128px;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: #5bc1ac;
+}
+
+
+/* SWİPER CSS **********************************/
+
+#blogswiper {
+  position: relative;
+  height: 1300px;
+}
+#blogswiper .swiper-pagination-bullet-active{
+  background-color: #5bc1ac;
+}
+
+/* URUNLER CSS **********************************/
+/* #section_3 {
+  position: relative;
+  height: 100%;
+}
+
+#section_3 {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+#section_3 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#section_3 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+} */
+
+/* #section_3 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}  */
+/* SWİPER CSS **********************************/
+
