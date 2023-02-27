@@ -1,0 +1,32 @@
+{
+  "name": "21.11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/translate": "^7.0.5",
+    "axios": "^1.2.0",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cat-me": "^1.0.3",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "ejs-layout": "^1.0.15",
+    "express": "^4.18.2",
+    "file-system": "^2.2.2",
+    "fs": "^0.0.1-security",
+    "iyzipay": "^2.0.48",
+    "jsonwebtoken": "^8.5.1",
+    "local-storage": "^2.0.0",
+    "mongoose": "^6.7.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20"
+  }
+}

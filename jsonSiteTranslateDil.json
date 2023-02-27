@@ -1,0 +1,22 @@
+{
+    "tr": 
+    {
+        "text1" : "hoşgeldiniz",
+        "text2" : "ana sayfa"
+    },
+    "en": 
+    {
+        "text1" : "wellcome",
+        "text2" : "home page"
+    },
+    "fr": 
+    {
+        "text1" : "bienvenue",
+        "text2" : "page d'accueil"
+    },
+    "ar": 
+    {
+        "text1" : "ويلكوم",
+        "text2" : "الصفحة الرئيسية"
+    }
+}
